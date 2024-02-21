@@ -11,7 +11,7 @@ module.exports = {
         email: 'Admin@yehatech.com',
         phoneNumber: '0978954555',
         password: await bcrypt.hash('Password@123', 10), // Hash the password
-        RoleId: 1, // Provide the appropriate RoleId
+        roleId: 1, // Provide the appropriate roleId
         status: 'Candidate',
         lastPasswordChange:null
       },
@@ -21,7 +21,7 @@ module.exports = {
         email: 'melaku@yehatech.com',
         phoneNumber: '0978998546',
         password: await bcrypt.hash('Password@123', 10), // Hash the password
-        RoleId: 1, // Provide the appropriate RoleId
+        roleId: 1, // Provide the appropriate roleId
         status: 'Candidate',
         lastPasswordChange:null
       },
@@ -31,7 +31,7 @@ module.exports = {
         email: 'abigya@yehatech.com',
         phoneNumber: '0978998534',
         password: await bcrypt.hash('Password@456', 10), // Hash the password
-        RoleId: 2, // Provide the appropriate RoleId
+        roleId: 2, // Provide the appropriate roleId
         status: 'Candidate',
         lastPasswordChange:null
       },

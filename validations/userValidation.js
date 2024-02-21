@@ -10,6 +10,10 @@ const createUserSchema = Joi.object({
     'string.empty': 'Last Name is required.',
     'any.required': 'Last Name is required.',
   }),
+  status: Joi.string().required().messages({
+    'string.empty': 'Status is required.',
+    'any.required': 'Status is required.',
+  }),
   email: Joi.string().email().required().messages({
     'string.empty': 'Email is required.',
     'any.required': 'Email Name is required.',
@@ -69,6 +73,10 @@ const updateUserSchema = Joi.object({
     'string.empty': 'Last Name is required.',
     'any.required': 'Last Name is required.',
   }),
+  status: Joi.string().required().messages({
+    'string.empty': 'Status is required.',
+    'any.required': 'Status is required.',
+  }),
   email: Joi.string().email().required().messages({
     'string.empty': 'Email is required.',
     'any.required': 'Email Name is required.',
@@ -77,8 +85,9 @@ const updateUserSchema = Joi.object({
     'string.empty': 'Phone Number is required.',
     'any.required': 'Phone Number is required.',
   }),
-  password: Joi.string().pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$'))
-  // .required(),
+  password: Joi.string()
+  .pattern(new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$'))
+  .required()
   .messages({
     'string.pattern.base': 'Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character.',
     'any.required': 'Password is required.',

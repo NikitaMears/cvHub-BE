@@ -4,10 +4,8 @@ const User = require('./models/User');
 const Role = require('./models/Role');
 const Permission = require('./models/Permission');
 const RolePermission = require('./models/RolePermission');
-const Client = require('./models/Client')
-const Service = require('./models/Service')
-const ClientService = require('./models/ClientService')
-const cors = require('cors');
+
+ const cors = require('cors');
 const crone = require('./controllers/password-expiration-cron')
 // Require the routes file
 const routes = require('./routes/routes');
@@ -19,7 +17,7 @@ Role.belongsToMany(Permission, { through: RolePermission });
 Permission.belongsToMany(Role, { through: RolePermission });
 User.belongsTo(Role);
 
-const port = 3000;
+const port = 3001;
 
 // Sync db models with the database
 db.sync()
@@ -32,7 +30,7 @@ db.sync()
 
 // Enable CORS
 const corsOptions = {
-  origin: ['http://69.243.101.217:3001', 'http://69.243.101.217:3002'],
+  origin: ['http://localhost:3000'],
 };
 
 // Use CORS middleware with specified options

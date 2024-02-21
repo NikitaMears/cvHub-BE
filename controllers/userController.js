@@ -5,8 +5,6 @@ const crypto = require('crypto');
 
 const User = require('../models/User');
 const Role = require('../models/Role');
-const Client = require('../models/Client');
-const Service = require('../models/Service');
 const nodemailer = require('nodemailer');
 const { hasPermission } = require('../middlewares/permissionChecker');
 const firebaseAdmin = require('firebase-admin');
@@ -34,9 +32,16 @@ exports.getUsers = async (req, res) => {
       return res.status(403).json({ error: "Unauthorized" });
     }
 
-    const users = await User.findAll({
-      attributes: { exclude: ["password"] },
-      include: Role,
+    // const users = await User.findAll({
+    //   attributes: { exclude: ["password"] },
+    //   include: Role,
+    //   include: Permission
+    // });
+    const users = await User.findAll( {
+      include: {
+        model: Role,
+        include: Permission,
+      },
     });
     res.json(users);
   } catch (error) {
@@ -85,7 +90,7 @@ exports.createUser = async (req, res) => {
   if (error) {
     return res.status(400).json({ error: error.details[0].message });
   }
-  const { firstName, lastName, email, phoneNumber, password, RoleId } =
+  const { firstName, lastName, email, phoneNumber, password, RoleId, status } =
     req.body;
   try {
     // Check if the user has the required permission
@@ -123,7 +128,7 @@ exports.createUser = async (req, res) => {
       email,
       phoneNumber,
       password: hashedPassword,
-      status: "Candidate",
+      status: status,
       RoleId,
     });
 
@@ -300,27 +305,33 @@ exports.login = async (req, res) => {
       return res.status(401).json({ error: "Invalid email or password" });
     }
 
-    const changePasswordRequired =
-      user.status === "Candidate" ||
-      shouldChangePassword(user.lastPasswordChange);
+    // const changePasswordRequired =
+    //   user.status === "Candidate" ||
+    //   shouldChangePassword(user.lastPasswordChange);
 
-    if (changePasswordRequired) {
-      const token = jwt.sign(
-        { id: user.id, changePasswordRequired: true },
-        config.jwtSecret,
-        { expiresIn: "1h" }
-      );
+    // if (changePasswordRequired) {
+    //   const token = jwt.sign(
+    //     { id: user.id, changePasswordRequired: true },
+    //     config.jwtSecret,
+    //     { expiresIn: "1h" }
+    //   );
 
-      return res
-        .status(200)
-        .json({ message: "Password change required", token });
-    }
+    //   return res
+    //     .status(200)
+    //     .json({ message: "Password change required", token });
+    // }
 
     const token = jwt.sign({ id: user.id }, config.jwtSecret, {
       expiresIn: "1hr",
     });
+    const userData = await User.findByPk(user.id, {
+      include: {
+        model: Role,
+        include: Permission,
+      },
+    });
 
-    res.status(200).json({ user, token });
+    res.status(200).json({ userData, token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });

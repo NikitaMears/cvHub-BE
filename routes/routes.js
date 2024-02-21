@@ -1,11 +1,13 @@
 const express = require('express');
 const userController = require('../controllers/userController');
-const mobileSocialAuthController = require('../controllers/mobileSocialAuthController');
+// const mobileSocialAuthController = require('../controllers/mobileSocialAuthController');
 const roleController = require('../controllers/roleController');
 const permissionController = require('../controllers/permissionController');
+const cvController = require('../controllers/cvController');
+
 const { verifyToken } = require('../middlewares/verifyToken');
-const clientController = require('../controllers/clientController');
-const serviceController = require('../controllers/serviceController');
+// const clientController = require('../controllers/clientController');
+// const serviceController = require('../controllers/serviceController');
 
 
 const router = express.Router();
@@ -18,10 +20,12 @@ router.post('/users/change-password/:id',verifyToken, userController.changePassw
 router.put('/users/:id', verifyToken, userController.updateUser);
 router.delete('/users/:id', verifyToken, userController.deleteUser);
 router.post('/login', userController.login);
-router.get('/user/:id', verifyToken, userController.getUserById); // Use the middleware to verify the token
+router.get('/users/:id', verifyToken, userController.getUserById); // Use the middleware to verify the token
 
 // Role routes
 router.get('/roles', verifyToken, roleController.getRoles);
+router.get('/roles/:id', verifyToken, roleController.getRoleById);
+
 router.post('/roles', verifyToken, roleController.createRole);
 router.put('/roles/:id', verifyToken, roleController.updateRole);
 router.delete('/roles/:id', verifyToken, roleController.deleteRole);
@@ -31,6 +35,12 @@ router.get('/permissions', verifyToken, permissionController.getPermissions);
 router.post('/permissions', verifyToken, permissionController.createPermission);
 router.put('/permissions/:id', verifyToken, permissionController.updatePermission);
 router.delete('/permissions/:id', verifyToken, permissionController.deletePermission);
+
+router.get('/cvs', cvController.getAll);
+router.get('/cvs/:id', cvController.getOne);
+router.put('/cvs/:id', cvController.update);
+router.delete('/cvs/:id', cvController.delete);
+router.post('/cvs/search', cvController.search);
 
 // Routes for services
 // router.post('/services', serviceController.createService);

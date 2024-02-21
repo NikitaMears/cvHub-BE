@@ -29,7 +29,26 @@ exports.getRoles = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+exports.getRoleById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    // Check if the user has the required permission
+    const hasAccess = await hasPermission(req, 'getRoles');
+    if (!hasAccess) {
+      return res.status(403).json({ error: 'Unauthorized' });
+    }
 
+    const roles = await Role.findByPk(id,{
+      include: Permission,
+    });
+    
+
+    res.json(roles);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
 
 // Create a new role
 // Create a new role
