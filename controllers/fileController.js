@@ -68,6 +68,6 @@ function readExcel(filePath) {
 }
 
 // Example usage:
-// const filePath = '../uploads/cv/2.xlsx';
+// const filePath = '../uploads/cv/converted.xlsx';
 // const excelData = readExcel(filePath);
-// console.log(excelData);
+//console.log(excelData);
