@@ -67,7 +67,10 @@ function readExcel(filePath) {
   return extractedData;
 }
 
+module.exports = { readExcel };
+
+
 // Example usage:
-const filePath = '../uploads/cv/2.xlsx';
-const excelData = readExcel(filePath);
-console.log(excelData);
+// const filePath = '../uploads/cv/2.xlsx';
+// const excelData = readExcel(filePath);
+// console.log(excelData);

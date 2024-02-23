@@ -1,5 +1,6 @@
 const Cv = require('../models/CV');
-
+const path = require('path');
+const fs = require('fs');
 // Controller for handling CV operations
 const cvController = {
   // Get all CVs
@@ -28,24 +29,49 @@ const cvController = {
   },
 
   // Update a CV
-  async update(req, res) {
-    const { id } = req.params;
-    const updatedData = req.body;
-    try {
-      const [rowsUpdated, [updatedCv]] = await Cv.update(updatedData, {
-        where: { id },
-        returning: true,
-      });
-      if (rowsUpdated > 0) {
-        res.json(updatedCv);
-      } else {
-        res.status(404).json({ error: 'CV not found' });
-      }
-    } catch (error) {
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  },
+  // async update(req, res) {
+  //   const { id } = req.params;
+  //   const updatedData = req.body;
+  //   try {
+  //     const [rowsUpdated, [updatedCv]] = await Cv.update(updatedData, {
+  //       where: { id },
+  //       returning: true,
+  //     });
+  //     if (rowsUpdated > 0) {
+  //       res.json(updatedCv);
+  //     } else {
+  //       res.status(404).json({ error: 'CV not found' });
+  //     }
+  //   } catch (error) {
+  //     res.status(500).json({ error: 'Internal server error' });
+  //   }
+  // },
 
+
+
+  async update(id, filePath) {
+    console.log("id", id)
+    console.log("filePath", filePath)
+   
+    try {
+      const cv = await Cv.findByPk(id);
+      if (!cv) {
+        return res.status(404).json({ error: 'cv not found' });
+      }
+  
+      cv.cv = filePath; // Now filePath is accessible here
+  
+      await cv.save();
+      return true;
+
+    } catch (error) {
+      console.log(error)
+      return false;
+      // res.status(500).json({ error: 'Internal server error' });
+    }
+  }
+  
+,
   // Delete a CV
   async delete(req, res) {
     const { id } = req.params;
