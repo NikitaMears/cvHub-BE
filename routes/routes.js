@@ -4,6 +4,8 @@ const userController = require('../controllers/userController');
 const roleController = require('../controllers/roleController');
 const permissionController = require('../controllers/permissionController');
 const cvController = require('../controllers/cvController');
+const rfpController = require('../controllers/rfpController');
+
 
 const { verifyToken } = require('../middlewares/verifyToken');
 // const clientController = require('../controllers/clientController');
@@ -41,6 +43,12 @@ router.get('/cvs/:id', cvController.getOne);
 router.put('/cvs/:id', cvController.update);
 router.delete('/cvs/:id', cvController.delete);
 router.post('/cvs/search', cvController.search);
+
+router.get('/rfps', rfpController.getAll);
+router.get('/rfps/:id', rfpController.getOne);
+router.put('/rfps/:id', rfpController.update);
+router.delete('/rfps/:id', rfpController.delete);
+router.post('/rfps/search', rfpController.search);
 
 // Routes for services
 // router.post('/services', serviceController.createService);

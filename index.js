@@ -9,6 +9,7 @@ const Cv = require('./models/CV');
 const multer  = require('multer'); // Middleware for handling file uploads
 const upload = multer({ dest: 'uploads/' }); // Destination folder for file uploads
 const uploadCv = multer({ dest: 'uploads/cv' }); // Destination folder for file uploads
+const uploadRFP = multer({ dest: 'uploads/rfp' }); // Destination folder for file uploads
 
 const {readExcel} = require("./controllers/fileController")
 const path = require('path');
@@ -19,6 +20,7 @@ const crone = require('./controllers/password-expiration-cron')
 // Require the routes file
 const routes = require('./routes/routes');
 const cvController = require('./controllers/cvController');
+const { readDoc } = require('./controllers/rfpFileController');
 
 const app = express();
 
@@ -99,6 +101,29 @@ app.post('/uploadCV/:id', uploadCv.single('file'), async (req, res) => {
   }
 });
 
+app.post('/uploadRFP', uploadRFP.single('file'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send('No files were uploaded.');
+  }
+
+  const fileExtension = path.extname(req.file.originalname); // Get the original file extension
+  const newFilename = `${req.file.filename}${fileExtension}`; // Add the original extension to the filename
+
+  // Rename the uploaded file to include the extension
+  fs.rename(req.file.path, `${req.file.path}${fileExtension}`, err => {
+    if (err) {
+      console.error('Error renaming file:', err);
+      return res.status(500).send('Error renaming file.');
+    }
+
+    // Construct the new file path with the extension
+    const filePath = `${req.file.path}${fileExtension}`;
+
+    // Process the Excel file with the correct file path
+    const docData = readDoc(req, res,filePath);
+
+  });
+});
 const port = 3001;
 
 
