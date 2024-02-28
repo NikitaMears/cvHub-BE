@@ -67,12 +67,16 @@ exports.createRole = async (req, res) => {
 
     // Create the role
     const newRole = await Role.create({ name });
+    console.log("sdfjsfdlkjsdfk",permissions)
 
     // Associate the permissions with the role
     if (permissions && permissions.length > 0) {
-      const rolePermissions = permissions.map(permissionId => ({
+      console.log("sdfjsfdlkjsdfk")
+
+      const rolePermissions = permissions.map(permission => ({
+
         RoleId: newRole.id,
-        PermissionId: permissionId,
+        PermissionId: permission,
       }));
       await RolePermission.bulkCreate(rolePermissions);
     }

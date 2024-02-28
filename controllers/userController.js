@@ -37,12 +37,14 @@ exports.getUsers = async (req, res) => {
     //   include: Role,
     //   include: Permission
     // });
-    const users = await User.findAll( {
+    const users = await User.findAll({
       include: {
         model: Role,
         include: Permission,
       },
+      order: [['updatedAt', 'DESC']], // Sort by updatedAt field in descending order
     });
+    
     res.json(users);
   } catch (error) {
     console.error(error);
