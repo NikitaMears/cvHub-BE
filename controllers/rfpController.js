@@ -1,6 +1,21 @@
 const RFP = require('../models/RFP');
 const path = require('path');
 const fs = require('fs');
+const multer = require('multer');
+
+// Multer storage configuration
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/rfp');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+
+// Initialize Multer upload
+const upload = multer({ storage: storage });
+
 // Controller for handling CV operations
 const rfpController = {
   // Get all CVs
@@ -39,6 +54,7 @@ console.log("data", data)
         res.status(500).json({ error: 'Internal server error' });
     }
 },
+
   // Get a single CV by ID
   async getOne(req, res) {
     const { id } = req.params;
@@ -77,10 +93,7 @@ console.log("data", data)
 
   async update (req, res) {
     const { id } = req.params;
-    const { error } = updateRFPSchema.validate(req.body); // Assuming you have a schema for validating RFP updates
-    if (error) {
-      return res.status(400).json({ error: error.details[0].message });
-    }
+    
   
     const { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, file } = req.body;
   
@@ -90,13 +103,7 @@ console.log("data", data)
         return res.status(404).json({ error: "RFP not found" });
       }
   
-      // Check if the user has the required permission (if applicable)
-      // const hasAccess = await hasPermission(req, "editRFP");
-      // if (!hasAccess) {
-      //   return res.status(403).json({ error: "Unauthorized" });
-      // }
   
-      // Update the RFP data
       rfp.title = title;
       rfp.rfpNo = rfpNo;
       rfp.client = client;
@@ -104,7 +111,7 @@ console.log("data", data)
       rfp.issuedOn = issuedOn;
       rfp.objectives = objectives;
       rfp.specificObjectives = specificObjectives;
-      rfp.file = file;
+    //  rfp.file = file;
   
       await rfp.save();
   
@@ -154,6 +161,39 @@ console.log("data", data)
       res.json(cvs);
     } catch (error) {
       res.status(500).json({ error: 'Internal server error' });
+    }
+  },
+
+
+  async  create(req, res, filePath) {
+    try {
+     
+  
+        // Extract data from the request body
+        const { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, sector } = req.body;
+        const file = req.file; // Uploaded file
+        console.log("fff", file)
+  
+        // Create a new RFP record in the database
+        const newRFP = await RFP.create({
+          title,
+          rfpNo,
+          client,
+          country,
+          issuedOn,
+          objectives,
+          specificObjectives,
+          sector,
+          file: filePath // Store filename in the database
+        });
+  
+        // Send the newly created RFP as a JSON response
+        return res.status(201).json(newRFP);
+    
+    } catch (error) {
+      // Handle any errors that occur during the creation process
+      console.error('Error creating RFP with file upload:', error);
+      return res.status(500).json({ error: 'Internal server error' });
     }
   },
 };

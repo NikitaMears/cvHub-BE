@@ -21,8 +21,19 @@ const crone = require('./controllers/password-expiration-cron')
 const routes = require('./routes/routes');
 const cvController = require('./controllers/cvController');
 const { readDoc } = require('./controllers/rfpFileController');
+const { create } = require('./controllers/rfpController');
+
 
 const app = express();
+const corsOptions = {
+  origin: 'http://localhost:3000', // Allow requests only from http://localhost:3000
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+// Enable CORS with specified options
+app.use(cors(corsOptions));
+
+
 
 // Associations
 Role.belongsToMany(Permission, { through: RolePermission });
@@ -60,6 +71,13 @@ app.use(express.static("public"));
 app.get("/uploads/cv/:filename", (req, res) => {
   const filename = req.params.filename;
   const filePath = path.join(__dirname, "uploads", "cv", filename);
+
+  // Send the file with the correct MIME type
+  res.sendFile(filePath);
+});
+app.get("/uploads/rfp/:filename", (req, res) => {
+  const filename = req.params.filename;
+  const filePath = path.join(__dirname, "uploads", "rfp", filename);
 
   // Send the file with the correct MIME type
   res.sendFile(filePath);
@@ -124,6 +142,31 @@ app.post('/uploadRFP', uploadRFP.single('file'), (req, res) => {
 
   });
 });
+
+app.post('/uploadCompleteRFP', uploadRFP.single('file'), (req, res) => {
+  console.log("Re", req.file)
+  if (!req.file) {
+    return res.status(400).send('No files were uploaded.');
+  }
+
+  const fileExtension = path.extname(req.file.originalname); // Get the original file extension
+  const newFilename = `${req.file.filename}${fileExtension}`; // Add the original extension to the filename
+
+  // Rename the uploaded file to include the extension
+  fs.rename(req.file.path, `${req.file.path}${fileExtension}`, err => {
+    if (err) {
+      console.error('Error renaming file:', err);
+      return res.status(500).send('Error renaming file.');
+    }
+
+    // Construct the new file path with the extension
+    const filePath = `${req.file.path}${fileExtension}`;
+
+    // Process the Excel file with the correct file path
+    const reqData = create(req, res,filePath);
+
+  });
+});
 const port = 3001;
 
 
@@ -135,14 +178,6 @@ db.sync()
   .catch((error) => {
     console.error('Error syncing database:', error);
   });
-
-//Enable CORS
-const corsOptions = {
-  origin: true, // Allow requests from all origins
-};
-
-// Use CORS middleware with specified options
-app.use(cors(corsOptions));
 
 
 // Express middleware

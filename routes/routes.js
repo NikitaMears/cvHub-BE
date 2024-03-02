@@ -45,6 +45,8 @@ router.delete('/cvs/:id', cvController.delete);
 router.post('/cvs/search', cvController.search);
 
 router.get('/rfps', rfpController.getAll);
+router.post('/rfps', rfpController.create);
+
 router.get('/rfps/:id', rfpController.getOne);
 router.put('/rfps/:id', rfpController.update);
 router.delete('/rfps/:id', rfpController.delete);
