@@ -129,7 +129,7 @@ console.log("data", data)
     const { id } = req.params;
     
   
-    const { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, file } = req.body;
+    const { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, file, sector } = req.body;
   
     try {
       const rfp = await RFP.findByPk(id);
@@ -145,6 +145,7 @@ console.log("data", data)
       rfp.issuedOn = issuedOn;
       rfp.objectives = objectives;
       rfp.specificObjectives = specificObjectives;
+      rfp.sector = sector;
     //  rfp.file = file;
   
       await rfp.save();
