@@ -5,6 +5,9 @@ const Role = require('./models/Role');
 const Permission = require('./models/Permission');
 const RolePermission = require('./models/RolePermission');
 const Cv = require('./models/CV');
+const Project = require('./models/Project');
+const CvProject = require('./models/CvProject');
+
 
 const multer  = require('multer'); // Middleware for handling file uploads
 const upload = multer({ dest: 'uploads/' }); // Destination folder for file uploads
@@ -39,7 +42,8 @@ app.use(cors(corsOptions));
 Role.belongsToMany(Permission, { through: RolePermission });
 Permission.belongsToMany(Role, { through: RolePermission });
 User.belongsTo(Role);
-
+Cv.belongsToMany(Project, { through: CvProject });
+Project.belongsToMany(Cv, { through: CvProject });
 
 app.post('/upload', upload.single('file'), (req, res) => {
   if (!req.file) {

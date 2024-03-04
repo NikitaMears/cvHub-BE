@@ -26,6 +26,10 @@ const RFP = sequelize.define('RFP', {
     type: DataTypes.TEXT,
     allowNull: true,
   },
+  sector: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
   specificObjectives: {
     type: DataTypes.TEXT,
     allowNull: true,

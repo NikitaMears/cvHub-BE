@@ -38,6 +38,11 @@ const Cv = sequelize.define('Cv', {
     type: DataTypes.TEXT,
     allowNull: true,
   },
+  averagePoints: {
+    type: DataTypes.DECIMAL(10, 2),
+    allowNull: true,
+    defaultValue: 0
+  },
 });
 
 Cv.bulkCreateCvs = async function(cvData) {

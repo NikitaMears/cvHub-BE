@@ -1,4 +1,6 @@
 const RFP = require('../models/RFP');
+const Cv = require('../models/CV');
+
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
@@ -70,6 +72,38 @@ console.log("data", data)
     }
   },
 
+  async  getCvsForRFPs(req, res) {
+    try {
+      const { id } = req.params;
+      
+      // Find the RFP with the given id
+      const rfp = await RFP.findByPk(id);
+  
+      if (!rfp) {
+        return res.status(404).json({ error: 'RFP not found' });
+      }
+  
+      // Get the country and sector from the RFP
+      const { country, sector } = rfp;
+  
+      // Find all CVs where location matches the country of the RFP and researchInterest matches the sector of the RFP
+      const cvs = await Cv.findAll({
+        where: {
+          country,
+          researchInterest: sector
+        },
+        order: [
+          ['averagePoints', 'DESC'], // Sort by averagePoints in descending order
+          ['priceAverage', 'ASC']    // Then sort by priceAverage in ascending order
+        ]
+      });
+  
+      res.json(cvs);
+    } catch (error) {
+      console.error('Error fetching CVs for RFPs:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  },
   // Update a CV
   // async update(req, res) {
   //   const { id } = req.params;
