@@ -1,4 +1,4 @@
-const TP = require('../models/TP');
+const TP = require('../models/Tp');
 const Cv = require('../models/CV');
 
 const path = require('path');
@@ -26,15 +26,16 @@ const tpController = {
       const tps = await TP.findAll();
       res.json(tps);
     } catch (error) {
+      console.log(error)
       res.status(500).json({ error: 'Internal server error' });
     }
   },
 
-  async  createTP(req, res, data) {
+  async  createTP(req, res, filePath) {
     try {
         // Extract data from the request body
-        const { title, rfpId, client, tin, year, members, participants, sector, file } = data;
-console.log("data", data)
+        const { title, rfpId, client, tin, year, members } = req.body;
+console.log("data", req.body)
         // Create a new TP record in the database
         const newTP = await TP.create({
             title,
@@ -43,8 +44,7 @@ console.log("data", data)
             tin,
             year,
             members,
-            participants,
-            file
+            file:filePath
         });
 
         // Send the newly created TP as a JSON response
@@ -59,17 +59,100 @@ console.log("data", data)
   // Get a single CV by ID
   async getOne(req, res) {
     const { id } = req.params;
+
     try {
-      const tp = await TP.findByPk(id);
-      if (tp) {
-        res.json(tp);
-      } else {
-        res.status(404).json({ error: 'TP not found' });
-      }
+        let tp;
+
+
+         const tp1 = await TP.findByPk(id);
+         if(tp1){
+          tp = tp1
+         }
+         else{
+          const tp2 = await TP.findOne({where: {rfpId: id}});
+          tp = tp2
+
+         }
+
+         if(tp){
+          if(tp.members){
+
+            const membersString = tp.members;
+            const membersArray = membersString.replace(/[{}"]/g, '').split(',').map(Number);
+  
+            // Initialize an array to store the results
+            const members = [];
+  
+            // Iterate over each memberId and query the cvModel
+            for (const memberId of membersArray) {
+                const cv = await Cv.findByPk(memberId);
+                if (cv) {
+                    members.push(cv); // Push the result to the members array
+                }
+            }
+  
+            // Add the members array to the tp object before sending the response
+            tp.members = members;
+          }
+         
+          res.json(tp);
+        }
+
+     
+
+           
+         else {
+            res.status(404).json({ error: 'TP not found' });
+        }
     } catch (error) {
-      res.status(500).json({ error: 'Internal server error' });
+        console.log(error);
+        res.status(500).json({ error: 'Internal server error' });
     }
-  },
+}
+,
+
+async getOneForRFP(req, res) {
+  const { id } = req.params;
+
+  try {
+      const tp = await TP.findOne({where: {rfpId: id}});
+      console.log(tp)
+      if(tp){
+        if(tp.members){
+
+          const membersString = tp.members;
+          const membersArray = membersString.replace(/[{}"]/g, '').split(',').map(Number);
+
+          // Initialize an array to store the results
+          const members = [];
+
+          // Iterate over each memberId and query the cvModel
+          for (const memberId of membersArray) {
+              const cv = await Cv.findByPk(memberId);
+              if (cv) {
+                  members.push(cv); // Push the result to the members array
+              }
+          }
+
+          // Add the members array to the tp object before sending the response
+          tp.members = members;
+        }
+       
+        res.json(tp);
+      }
+
+   
+
+         
+       else {
+          res.status(404).json({ error: 'TP not found' });
+      }
+  } catch (error) {
+      console.log(error);
+      res.status(500).json({ error: 'Internal server error' });
+  }
+}
+,
 
 //   async  getCvsForTPs(req, res) {
 //     try {
@@ -105,11 +188,11 @@ console.log("data", data)
 //   },
 
 
-  async update (req, res) {
+  async updateTP (req, res, filePath) {
     const { id } = req.params;
     
   
-    const { title, rfpId, client, tin, year, members, participants, file, sector } = req.body;
+    const { title, rfpId, client, tin, year, members } = req.body;
   
     try {
       const tp = await TP.findByPk(id);
@@ -124,7 +207,9 @@ console.log("data", data)
       tp.tin = tin;
       tp.year = year;
       tp.members = members;
-      tp.participants = participants;
+      if(req.filePath != null){
+        tp.file = filePath;
+      }
     //  tp.file = file;
   
       await tp.save();
@@ -179,7 +264,7 @@ console.log("data", data)
   },
 
 
-  async  create(req, res, filePath) {
+  async  createTP(req, res, filePath) {
     try {
      
   

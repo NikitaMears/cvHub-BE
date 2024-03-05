@@ -7,6 +7,9 @@ const cvController = require('../controllers/cvController');
 const rfpController = require('../controllers/rfpController');
 const tpController = require('../controllers/tpController');
 const { verifyToken } = require('../middlewares/verifyToken');
+const projectController = require('../controllers/projectController');
+const cvProjectController = require('../controllers/cvProjectController');
+
 const router = express.Router();
 
 // User routes
@@ -43,16 +46,34 @@ router.get('/rfps', rfpController.getAll);
 router.post('/rfps', rfpController.create);
 
 router.get('/rfps/:id', rfpController.getOne);
+router.get('/rfpsCvs/:id', rfpController.getCvsForRFPs);
+
 router.put('/rfps/:id', rfpController.update);
 router.delete('/rfps/:id', rfpController.delete);
 router.post('/rfps/search', rfpController.search);
 
 router.get('/tps', tpController.getAll);
-router.post('/tps', tpController.create);
+router.post('/tps', tpController.createTP);
+
+router.get('/cvProjects/:id', cvProjectController.getOne);
 
 router.get('/tps/:id', tpController.getOne);
-router.put('/tps/:id', tpController.update);
+router.get('/tps/:rfpId', tpController.getOne);
+
+router.put('/tps/:id', tpController.updateTP);
 router.delete('/tps/:id', tpController.delete);
+
+
+router.get('/projects', projectController.getAll);
+router.post('/projects', projectController.create);
+
+router.get('/projects/:id', projectController.getOne);
+router.put('/projects/:id', projectController.update);
+router.delete('/projects/:id', projectController.delete);
+
+
+
+
 
 router.post('/signup', userController.signup);
 router.get('/dashboard',verifyToken, userController.dashboard);

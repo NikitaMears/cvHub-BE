@@ -26,6 +26,7 @@ const rfpController = {
       const rfps = await RFP.findAll();
       res.json(rfps);
     } catch (error) {
+      console.log(error)
       res.status(500).json({ error: 'Internal server error' });
     }
   },

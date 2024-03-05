@@ -19,13 +19,14 @@ const Tp = sequelize.define('Tp', {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  participants: {
-    type: DataTypes.TEXT,
+ 
+  members: {
+    type: DataTypes.ARRAY(DataTypes.TEXT),
     allowNull: true,
   },
-  members: {
-    type: DataTypes.TEXT,
-    allowNull: true,
+  rfpId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
   },
   file: {
     type: DataTypes.TEXT,
@@ -37,6 +38,6 @@ const Tp = sequelize.define('Tp', {
 });
 
 // Define association between Tp and RFP
-Tp.hasOne(RFP); // Tp will have one RFP
+// Tp.hasOne(RFP); // Tp will have one RFP
 
 module.exports = Tp;
