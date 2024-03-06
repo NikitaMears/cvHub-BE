@@ -3,9 +3,13 @@ const sequelize = require('../config/db');
 
 const CvProject = sequelize.define('CvProject', {
   // No need for attributes in the junction table
+  position: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   points: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
     defaultValue: 0,
     validate: {
       min: 0,

@@ -2,22 +2,34 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
 const Project = sequelize.define('Project', {
+
   title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  description: {
-    type: DataTypes.TEXT,
-    allowNull: true,
+  client: {
+    type: DataTypes.STRING,
+    allowNull: false,
   },
-  points: {
+  worth: {
+    type: DataTypes.FLOAT,
+    allowNull: false,
+  },
+  projectType: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  duration: {
     type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  summary: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  file: {
+    type: DataTypes.STRING,
     allowNull: true,
-    defaultValue: 0,
-    validate: {
-      min: 0,
-      max: 5,
-    },
   },
 });
 

@@ -7,17 +7,22 @@ const cvProjectController = {
     // Create a CvProject
     async create(req, res) {
         console.log("2")
-      const { cvId, projectId, points } = req.body;
-      console.log(points)
-      try {
-        const createdCvProject = await CvProject.create({ CvId: cvId,ProjectId: projectId, points:points });
+      const { projectId, teamMembers } = req.body;
+      console.log(teamMembers)
+      const createdCvProject = []
 
-        const cvProjects = await CvProject.findAll({ where: { CvId: cvId } });
-        const totalPoints = cvProjects.reduce((acc, cvProject) => acc + cvProject.points, 0);
-        const averagePoints = totalPoints / cvProjects.length;
-    
-        // Update the averagePoints field of the CV model
-        await Cv.update({ averagePoints: averagePoints }, { where: { id: cvId } });
+
+      try {
+
+        teamMembers.forEach(teamMember => {
+          const cp =  CvProject.create({ CvId: teamMember.id,ProjectId: projectId, position: teamMember.position });
+          createdCvProject.push(cp)
+
+          
+        });
+
+
+        
     
         res.json(createdCvProject);
       } catch (error) {
@@ -25,7 +30,26 @@ const cvProjectController = {
         res.status(500).json({ error: 'Internal server error' });
       }
     },
+    async ponts(req, res) {
+      console.log("2")
+    const { cvId, projectId,position, points } = req.body;
+    console.log(req.body)
+    try {
+      const createdCvProject = await CvProject.create({ CvId: cvId,ProjectId: projectId, points:points, position:position });
+
+      const cvProjects = await CvProject.findAll({ where: { CvId: cvId } });
+      const totalPoints = cvProjects.reduce((acc, cvProject) => acc + cvProject.points, 0);
+      const averagePoints = totalPoints / cvProjects.length;
   
+      // Update the averagePoints field of the CV model
+      await Cv.update({ averagePoints: averagePoints }, { where: { id: cvId } });
+  
+      res.json(createdCvProject);
+    } catch (error) {
+      console.log(error)
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  },
     // Get all CvProjects
     async getAll(req, res) {
       try {
@@ -78,6 +102,48 @@ const cvProjectController = {
       }
 ,      
   
+async getByProjectId(req, res) {
+  const { id } = req.params;
+  try {
+    const cvProject = await CvProject.findAll({
+      where: { ProjectId: id },
+    });
+console.log("cvProject", cvProject)
+    // Check if any CV projects are found
+    if (cvProject.length > 0) {
+      console.log(cvProject)
+      const cvIds = cvProject.map((cv) => cv.CvId);
+
+      console.log("ids", cvIds)
+
+      // Fetch projects using the projectIds array
+      const cvs = await Cv.findAll({
+        where: { id: cvIds }, // Query projects using the projectIds array
+      });
+
+      const projectWithCV = cvProject.map((cvProj) => {
+          const associatedCv = cvs.find((cv) => cv.id === cvProj.CvId);
+          return {
+            cvProjectInfo: cvProj,
+            associatedCv: associatedCv,
+          };
+        });
+  
+        // Return the custom response object
+        res.status(200).json(projectWithCV);
+      // Return the associated projects
+  //    res.json(projects);
+    } else {
+      // Return error if no CV projects are found
+      res.status(404).json({ error: 'CvProject not found' });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+,      
+
     // Update a CvProject
     async update(req, res) {
       const { id } = req.params;

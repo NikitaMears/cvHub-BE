@@ -9,6 +9,7 @@ const projectController = {
       const projects = await Project.findAll();
       res.json(projects);
     } catch (error) {
+      console.log(error)
       res.status(500).json({ error: 'Internal server error' });
     }
   },
@@ -29,11 +30,11 @@ const projectController = {
   },
 
   // Create a Project
-  async create(req, res) {
+  async createFirmExperience(req, res, filePath) {
     console.log("he")
-    const { title, description, points } = req.body;
+    const { title, client, worth, projectType, duration,summary } = req.body;
     try {
-      const newProject = await Project.create({ title, description, points });
+      const newProject = await Project.create({ title, client, worth, projectType, duration,summary, file:filePath });
       res.json(newProject);
     } catch (error) {
         console.log(error)

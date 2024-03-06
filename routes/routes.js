@@ -56,16 +56,22 @@ router.get('/tps', tpController.getAll);
 router.post('/tps', tpController.createTP);
 
 router.get('/cvProjects/:id', cvProjectController.getOne);
+router.get('/projectCvs/:id', cvProjectController.getByProjectId);
+
+router.post('/cvProjects', cvProjectController.create);
+router.post('/cvProjects2', cvProjectController.ponts);
+
+
 
 router.get('/tps/:id', tpController.getOne);
-router.get('/tps/:rfpId', tpController.getOne);
+router.get('/rfpTP/:id', tpController.getOneForRFP);
 
 router.put('/tps/:id', tpController.updateTP);
 router.delete('/tps/:id', tpController.delete);
 
 
 router.get('/projects', projectController.getAll);
-router.post('/projects', projectController.create);
+router.post('/projects', projectController.createFirmExperience);
 
 router.get('/projects/:id', projectController.getOne);
 router.put('/projects/:id', projectController.update);
