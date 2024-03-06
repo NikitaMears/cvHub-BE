@@ -4,6 +4,7 @@ const Cv = require('../models/CV');
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
+const { json } = require('sequelize');
 
 // Multer storage configuration
 const storage = multer.diskStorage({
@@ -78,19 +79,30 @@ console.log("data", req.body)
           if(tp.members){
 
             const membersString = tp.members;
-            const membersArray = membersString.replace(/[{}"]/g, '').split(',').map(Number);
+            console.log("*****",membersString)
+            
+          //  const membersArray = membersString.replace(/[{}"]/g, '').split(',').map(Number);
   
             // Initialize an array to store the results
             const members = [];
-  
-            // Iterate over each memberId and query the cvModel
-            for (const memberId of membersArray) {
-                const cv = await Cv.findByPk(memberId);
-                if (cv) {
-                    members.push(cv); // Push the result to the members array
-                }
-            }
-  
+            console.log(membersString)
+
+// Use map instead of forEach
+const promises = membersString.map(async mem => {
+  const cv = await Cv.findByPk(mem.id);
+ // console.log(cv);
+  if (cv) {
+      // Assign the position value to the cv object
+      cv.cv = mem.position;
+      members.push(cv); // Push the result to the members array
+  }
+});
+
+
+// Wait for all asynchronous operations to complete
+await Promise.all(promises);
+
+
             // Add the members array to the tp object before sending the response
             tp.members = members;
           }
@@ -110,29 +122,39 @@ console.log("data", req.body)
     }
 }
 ,
-
 async getOneForRFP(req, res) {
   const { id } = req.params;
 
   try {
-      const tp = await TP.findOne({where: {rfpId: id}});
-      console.log(tp)
-      if(tp){
+    const tp = await TP.findOne({where: {rfpId: id}});
+
+       if(tp){
         if(tp.members){
 
           const membersString = tp.members;
-          const membersArray = membersString.replace(/[{}"]/g, '').split(',').map(Number);
+          console.log("*****",membersString)
+          
+        //  const membersArray = membersString.replace(/[{}"]/g, '').split(',').map(Number);
 
           // Initialize an array to store the results
           const members = [];
+          console.log(membersString)
 
-          // Iterate over each memberId and query the cvModel
-          for (const memberId of membersArray) {
-              const cv = await Cv.findByPk(memberId);
-              if (cv) {
-                  members.push(cv); // Push the result to the members array
-              }
-          }
+// Use map instead of forEach
+const promises = membersString.map(async mem => {
+const cv = await Cv.findByPk(mem.id);
+// console.log(cv);
+if (cv) {
+    // Assign the position value to the cv object
+    cv.cv = mem.position;
+    members.push(cv); // Push the result to the members array
+}
+});
+
+
+// Wait for all asynchronous operations to complete
+await Promise.all(promises);
+
 
           // Add the members array to the tp object before sending the response
           tp.members = members;
@@ -152,6 +174,47 @@ async getOneForRFP(req, res) {
       res.status(500).json({ error: 'Internal server error' });
   }
 }
+// async getOneForRFP(req, res) {
+//   const { id } = req.params;
+
+//   try {
+//       const tp = await TP.findOne({where: {rfpId: id}});
+//       console.log(tp)
+//       if(tp){
+//         if(tp.members){
+
+//           const membersString = tp.members;
+//           const membersArray = membersString.replace(/[{}"]/g, '').split(',').map(Number);
+
+//           // Initialize an array to store the results
+//           const members = [];
+
+//           // Iterate over each memberId and query the cvModel
+//           for (const memberId of membersArray) {
+//               const cv = await Cv.findByPk(memberId);
+//               if (cv) {
+//                   members.push(cv); // Push the result to the members array
+//               }
+//           }
+
+//           // Add the members array to the tp object before sending the response
+//           tp.members = members;
+//         }
+       
+//         res.json(tp);
+//       }
+
+   
+
+         
+//        else {
+//           res.status(404).json({ error: 'TP not found' });
+//       }
+//   } catch (error) {
+//       console.log(error);
+//       res.status(500).json({ error: 'Internal server error' });
+//   }
+// }
 ,
 
 //   async  getCvsForTPs(req, res) {
@@ -221,6 +284,30 @@ async getOneForRFP(req, res) {
     }
   },
   
+  async addTeamForTP(req, res) {
+    const { tpId, teamMembers } = req.body;
+
+    try {
+        const tp = await TP.findByPk(tpId);
+        if (!tp) {
+            return res.status(404).json({ error: "TP not found" });
+        }
+
+        // Parse the teamMembers JSON string to an array
+       // const parsedTeamMembers = JSON.parse(teamMembers);
+
+        console.log("Sanitized teamMembers:", teamMembers);
+        tp.members = teamMembers;
+        await tp.save();
+
+        res.json(tp);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}
+
+,
   
 
   // Delete a CV

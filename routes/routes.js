@@ -54,6 +54,7 @@ router.post('/rfps/search', rfpController.search);
 
 router.get('/tps', tpController.getAll);
 router.post('/tps', tpController.createTP);
+router.post('/tpMembers', tpController.addTeamForTP);
 
 router.get('/cvProjects/:id', cvProjectController.getOne);
 router.get('/projectCvs/:id', cvProjectController.getByProjectId);
