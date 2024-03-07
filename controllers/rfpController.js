@@ -84,18 +84,16 @@ console.log("data", data)
         return res.status(404).json({ error: 'RFP not found' });
       }
   
-      // Get the country and sector from the RFP
       const { country, sector } = rfp;
   
-      // Find all CVs where location matches the country of the RFP and researchInterest matches the sector of the RFP
       const cvs = await Cv.findAll({
         where: {
           country,
           researchInterest: sector
         },
         order: [
-          ['averagePoints', 'DESC'], // Sort by averagePoints in descending order
-          ['priceAverage', 'ASC']    // Then sort by priceAverage in ascending order
+          ['averagePoints', 'DESC'],
+          ['priceAverage', 'ASC']    
         ]
       });
   
