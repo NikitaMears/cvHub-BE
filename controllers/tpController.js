@@ -1,5 +1,6 @@
 const TP = require('../models/Tp');
 const Cv = require('../models/CV');
+const { Op } = require('sequelize');
 
 const path = require('path');
 const fs = require('fs');
@@ -32,6 +33,32 @@ const tpController = {
     }
   },
 
+  async  createTPFromFile(req, res,data, filePath) {
+    try {
+      console.log(data.rfpNo)
+        // Extract data from the request body
+        const { title, rfpNo, client,  issuedOn, objectives, specificObjectives, sector, file, value } = data;
+        // Create a new TP record in the database
+        
+        const newTP = await TP.create({
+            title,
+            rfpId: rfpNo,
+            client,
+            year: issuedOn,
+            file:file,
+            content: value,
+            objectives, specificObjectives,
+            sector
+        });
+
+        // Send the newly created TP as a JSON response
+        res.status(201).json(newTP);
+    } catch (error) {
+        // Handle any errors that occur during the creation process
+        console.error('Error creating TP:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+},
   async  createTP(req, res, filePath) {
     try {
         // Extract data from the request body
@@ -327,25 +354,24 @@ await Promise.all(promises);
 
   // Search for CVs based on criteria
   async search(req, res) {
-    const { query } = req.query;
+    const { query } = req.body;
+    console.log("query", query)
     try {
-      const cvs = await Cv.findAll({
+      const tps = await TP.findAll({
         where: {
           [Op.or]: [
-            { serialNumber: { [Op.like]: `%${query}%` } },
-            { expertName: { [Op.like]: `%${query}%` } },
-            { tin: { [Op.like]: `%${query}%` } },
-            { cv: { [Op.like]: `%${query}%` } },
-            { contactInformation: { [Op.like]: `%${query}%` } },
-            { researchInterest: { [Op.like]: `%${query}%` } },
-            { priceAverage: { [Op.like]: `%${query}%` } },
-            { projectTitle: { [Op.like]: `%${query}%` } },
-            { cvSummary: { [Op.like]: `%${query}%` } },
+            { title: {[Op.iLike]: `%${query}%`   } },
+            { client: { [Op.iLike]: `%${query}%` } },
+            { objectives: { [Op.iLike]: `%${query}%` } },
+            { sector: { [Op.iLike]: `%${query}%` } },
+            { specificObjectives: { [Op.iLike]: `%${query}%` } },
+            { content: { [Op.iLike]: `%${query}%` } },
           ],
         },
       });
-      res.json(cvs);
+      res.json(tps);
     } catch (error) {
+      console.log(error)
       res.status(500).json({ error: 'Internal server error' });
     }
   },

@@ -1,5 +1,6 @@
 const RFP = require('../models/RFP');
 const Cv = require('../models/CV');
+const { Op } = require('sequelize');
 
 const path = require('path');
 const fs = require('fs');
@@ -30,11 +31,29 @@ const rfpController = {
       res.status(500).json({ error: 'Internal server error' });
     }
   },
+  async  searchContent(req, res) {
+    const searchText = req.params.searchText; // Assuming the search text is provided in the request parameters
+    try {
+        // Using Sequelize to find all records where the text_data column contains the search text
+        const rfps = await RFP.findAll({
+            where: {
+                content: {
+                    [Op.iLike]: `%${searchText}%` // Case-insensitive search with wildcard %
+                }
+            }
+        });
 
+        res.json(rfps);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
+,
   async  createRFP(req, res, data) {
     try {
         // Extract data from the request body
-        const { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, sector, file } = data;
+        const { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, sector, file, value } = data;
 console.log("data", data)
         // Create a new RFP record in the database
         const newRFP = await RFP.create({
@@ -46,7 +65,8 @@ console.log("data", data)
             objectives,
             specificObjectives,
             sector,
-            file
+            file,
+            content : value
         });
 
         // Send the newly created RFP as a JSON response
@@ -84,6 +104,7 @@ console.log("data", data)
         return res.status(404).json({ error: 'RFP not found' });
       }
   
+      console.log("rr", rfp)
       const { country, sector } = rfp;
   
       const cvs = await Cv.findAll({
@@ -175,30 +196,46 @@ console.log("data", data)
 
   // Search for CVs based on criteria
   async search(req, res) {
-    const { query } = req.query;
+    const { query } = req.body;
+    console.log("query", query)
     try {
-      const cvs = await Cv.findAll({
+      const cvs = await RFP.findAll({
         where: {
           [Op.or]: [
-            { serialNumber: { [Op.like]: `%${query}%` } },
-            { expertName: { [Op.like]: `%${query}%` } },
-            { country: { [Op.like]: `%${query}%` } },
-            { cv: { [Op.like]: `%${query}%` } },
-            { contactInformation: { [Op.like]: `%${query}%` } },
-            { researchInterest: { [Op.like]: `%${query}%` } },
-            { priceAverage: { [Op.like]: `%${query}%` } },
-            { projectTitle: { [Op.like]: `%${query}%` } },
-            { cvSummary: { [Op.like]: `%${query}%` } },
+            { title: {[Op.iLike]: `%${query}%`   } },
+            { rfpNo: { [Op.iLike]: `%${query}%` } },
+            { client: { [Op.iLike]: `%${query}%` } },
+            { country: { [Op.iLike]: `%${query}%` } },
+            { issuedOn: { [Op.iLike]: `%${query}%` } },
+            { objectives: { [Op.iLike]: `%${query}%` } },
+            { sector: { [Op.iLike]: `%${query}%` } },
+            { specificObjectives: { [Op.iLike]: `%${query}%` } },
+            { content: { [Op.iLike]: `%${query}%` } },
           ],
         },
       });
       res.json(cvs);
     } catch (error) {
+      console.log(error)
       res.status(500).json({ error: 'Internal server error' });
     }
   },
-
-
+  async searchTitle(req, res, query) {
+    console.log("Query:", query);
+    try {
+      const rfp = await RFP.findAll({
+        where: {
+          [Op.or]: [
+            { title: { [Op.like]: `%${query}%` } },
+          ],
+        },
+      });
+    //  console.log("Matching RFPs:", rfp);
+return rfp    } catch (error) {
+      console.error("Error:", error);
+return false    }
+  }
+,  
   async  create(req, res, filePath) {
     try {
      

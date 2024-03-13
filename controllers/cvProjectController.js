@@ -32,17 +32,49 @@ const cvProjectController = {
     },
     async ponts(req, res) {
       console.log("2")
-    const { cvId, projectId,position, points } = req.body;
+    const { cvId, projectId,position, points, qualityOfWork,  meetingDeadline, knowledgeOfWork, planning, decisionMaking} = req.body;
     console.log(req.body)
     try {
-      const createdCvProject = await CvProject.create({ CvId: cvId,ProjectId: projectId, points:points, position:position });
+
+      const [createdCvProject, created] = await CvProject.findOrCreate({
+  where: { CvId: cvId, ProjectId: projectId }, // Search criteria
+  defaults: { // Default values to be set if the record doesn't exist
+    CvId: cvId,
+    ProjectId: projectId,
+    points: points,
+    position: position,
+    qualityOfWork: qualityOfWork,
+    meetingDeadline: meetingDeadline,
+    knowledgeOfWork: knowledgeOfWork,
+    planning: planning,
+    decisionMaking: decisionMaking
+  }
+});
+
+// Check if the record was created or found
+if (!created) {
+  // Record already existed, update its values
+  createdCvProject.points = points;
+  createdCvProject.position = position;
+  createdCvProject.qualityOfWork = qualityOfWork;
+  createdCvProject.meetingDeadline = meetingDeadline;
+  createdCvProject.knowledgeOfWork = knowledgeOfWork;
+  createdCvProject.planning = planning;
+  createdCvProject.decisionMaking = decisionMaking;
+
+  // Save the changes
+  await createdCvProject.save();
+}
 
       const cvProjects = await CvProject.findAll({ where: { CvId: cvId } });
       const totalPoints = cvProjects.reduce((acc, cvProject) => acc + cvProject.points, 0);
       const averagePoints = totalPoints / cvProjects.length;
-  
+
+      console.log(averagePoints)
+
+
       // Update the averagePoints field of the CV model
-      await Cv.update({ averagePoints: averagePoints }, { where: { id: cvId } });
+   await Cv.update({ averagePoints: averagePoints }, { where: { id: cvId } });
   
       res.json(createdCvProject);
     } catch (error) {

@@ -66,6 +66,8 @@ router.post('/cvProjects2', cvProjectController.ponts);
 
 router.get('/tps/:id', tpController.getOne);
 router.get('/rfpTP/:id', tpController.getOneForRFP);
+router.post('/tps/search', tpController.search);
+
 
 router.put('/tps/:id', tpController.updateTP);
 router.delete('/tps/:id', tpController.delete);

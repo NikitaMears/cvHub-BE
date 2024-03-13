@@ -8,11 +8,57 @@ const CvProject = sequelize.define('CvProject', {
     allowNull: false,
   },
   points: {
+    type: DataTypes.FLOAT,
+    allowNull: true,
+    defaultValue: 0,
+    validate: {
+      min: 1,
+      max: 5,
+    },
+  },
+  qualityOfWork: {
     type: DataTypes.INTEGER,
     allowNull: true,
     defaultValue: 0,
     validate: {
-      min: 0,
+      min: 1,
+      max: 5,
+    },
+  },
+  meetingDeadline: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: 0,
+    validate: {
+      min: 1,
+      max: 5,
+    },
+  },
+  knowledgeOfWork: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: 0,
+    validate: {
+      min: 1,
+      max: 5,
+    },
+  },
+
+  planning: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: 0,
+    validate: {
+      min: 1,
+      max: 5,
+    },
+  },
+  decisionMaking: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: 0,
+    validate: {
+      min: 1,
       max: 5,
     },
   },

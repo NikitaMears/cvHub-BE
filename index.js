@@ -17,6 +17,7 @@ const uploadRFP = multer({ dest: 'uploads/rfp' }); // Destination folder for fil
 const uploadTP = multer({ dest: 'uploads/tp' }); // Destination folder for file uploads
 const uploadFirmExperience = multer({ dest: 'uploads/firmExperience' }); // Destination folder for file uploads
 
+const uploadTPFull = multer({ dest: 'uploads/tp' }); // Destination folder for file uploads
 
 const {readExcel} = require("./controllers/fileController")
 const path = require('path');
@@ -28,8 +29,10 @@ const crone = require('./controllers/password-expiration-cron')
 const routes = require('./routes/routes');
 const cvController = require('./controllers/cvController');
 const { readDoc } = require('./controllers/rfpFileController');
+const { readDocForTP } = require('./controllers/tpFileController');
+
 const { create } = require('./controllers/rfpController');
-const { createTP, updateTP } = require('./controllers/tpController');
+const { createTP, updateTP, createTPFromFile } = require('./controllers/tpController');
 const { createFirmExperience } = require('./controllers/projectController');
 
 
@@ -208,6 +211,32 @@ app.post('/uploadTP', uploadTP.single('file'), (req, res) => {
 
     // Process the Excel file with the correct file path
     const reqData = createTP(req, res,filePath);
+
+  });
+});
+
+
+app.post('/uploadTPFull', uploadTPFull.single('file'), (req, res) => {
+  console.log("Re", req.file)
+  if (!req.file) {
+    return res.status(400).send('No files were uploaded.');
+  }
+
+  const fileExtension = path.extname(req.file.originalname); // Get the original file extension
+  const newFilename = `${req.file.filename}${fileExtension}`; // Add the original extension to the filename
+
+  // Rename the uploaded file to include the extension
+  fs.rename(req.file.path, `${req.file.path}${fileExtension}`, err => {
+    if (err) {
+      console.error('Error renaming file:', err);
+      return res.status(500).send('Error renaming file.');
+    }
+
+    // Construct the new file path with the extension
+    const filePath = `${req.file.path}${fileExtension}`;
+
+    // Process the Excel file with the correct file path
+    const reqData = readDocForTP(req, res,filePath);
 
   });
 });

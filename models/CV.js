@@ -39,7 +39,7 @@ const Cv = sequelize.define('Cv', {
     allowNull: true,
   },
   averagePoints: {
-    type: DataTypes.DECIMAL(10, 2),
+    type: DataTypes.FLOAT(10, 2),
     allowNull: true,
     defaultValue: 0
   },

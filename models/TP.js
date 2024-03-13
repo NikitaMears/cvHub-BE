@@ -13,7 +13,7 @@ const Tp = sequelize.define('Tp', {
   },
   tin: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   client: {
     type: DataTypes.STRING,
@@ -29,6 +29,22 @@ const Tp = sequelize.define('Tp', {
     allowNull: false,
   },
   file: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
+  objectives: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
+  sector: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
+  specificObjectives: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
+  content: {
     type: DataTypes.TEXT,
     allowNull: true,
   },

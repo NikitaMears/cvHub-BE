@@ -64,7 +64,12 @@ const { createRFP } = require('./rfpController');
 async function readDoc(req, res, filePath) {
     try {
         const { value } = await mammoth.extractRawText({ path: filePath });
+      //  console.log("val", value)
 
+        const outputFilePath = '.2.txt'; // Replace 'output.txt' with the desired output file path
+
+        fs.writeFileSync(outputFilePath, value, 'utf8');
+        console.log('Text saved to', outputFilePath);
         // Define variables to store extracted data
         let title = '';
         let rfpNo = '';
@@ -158,7 +163,7 @@ async function readDoc(req, res, filePath) {
         
 
         console.log('Recommended Sector:', sector);
-        const data = { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, sector };
+        const data = { title, rfpNo, client, country, issuedOn, objectives, specificObjectives, sector, value };
         data.file = filePath;
         createRFP(req, res, data)
         // const savedRFP = await RFP.create({
@@ -189,8 +194,6 @@ async function readDoc(req, res, filePath) {
 // Example usage
 
 
-
-  
   
 // Example usage
 // const filePath = '../uploads/rfp/2.docx'; // Change this to your document's path

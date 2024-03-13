@@ -34,6 +34,10 @@ const RFP = sequelize.define('RFP', {
     type: DataTypes.TEXT,
     allowNull: true,
   },
+  content: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+  },
   file: {
     type: DataTypes.STRING,
     allowNull: false,
