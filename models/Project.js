@@ -11,8 +11,12 @@ const Project = sequelize.define('Project', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  sector: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   worth: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   projectType: {
@@ -27,7 +31,11 @@ const Project = sequelize.define('Project', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  file: {
+  teamMembers: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  detailSheet: {
     type: DataTypes.STRING,
     allowNull: true,
   },

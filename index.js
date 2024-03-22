@@ -20,6 +20,8 @@ const uploadFirmExperience = multer({ dest: 'uploads/firmExperience' }); // Dest
 const uploadTPFull = multer({ dest: 'uploads/tp' }); // Destination folder for file uploads
 
 const {readExcel} = require("./controllers/fileController")
+const {readExcelForFirm} = require("./controllers/firmFileController")
+
 const path = require('path');
 const fs = require('fs')
 
@@ -261,7 +263,7 @@ app.post('/uploadFirmExperience', uploadFirmExperience.single('file'), (req, res
     const filePath = `${req.file.path}${fileExtension}`;
 
     // Process the Excel file with the correct file path
-    const reqData = createFirmExperience(req, res,filePath);
+readExcelForFirm(filePath);
 
   });
 });
