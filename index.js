@@ -13,6 +13,8 @@ const multer  = require('multer'); // Middleware for handling file uploads
 const upload = multer({ dest: 'uploads/' }); // Destination folder for file uploads
 const uploadCv = multer({ dest: 'uploads/cv' }); // Destination folder for file uploads
 const uploadRFP = multer({ dest: 'uploads/rfp' }); // Destination folder for file uploads
+const uploadRIR = multer({ dest: 'uploads/ir' }); // Destination folder for file uploads
+
 
 const uploadTP = multer({ dest: 'uploads/tp' }); // Destination folder for file uploads
 const uploadFirmExperience = multer({ dest: 'uploads/firmExperience' }); // Destination folder for file uploads
@@ -21,6 +23,8 @@ const uploadTPFull = multer({ dest: 'uploads/tp' }); // Destination folder for f
 
 const {readExcel} = require("./controllers/fileController")
 const {readExcelForFirm} = require("./controllers/firmFileController")
+const {readDocForIR, updateDocForIR} = require("./controllers/irFileController")
+
 
 const path = require('path');
 const fs = require('fs')
@@ -267,6 +271,33 @@ readExcelForFirm(filePath);
 
   });
 });
+app.post('/uploadIR', uploadRIR.single('file'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send('No files were uploaded.');
+  }
+
+  const fileExtension = path.extname(req.file.originalname); // Get the original file extension
+  const newFilename = `${req.file.filename}${fileExtension}`; // Add the original extension to the filename
+
+  // Rename the uploaded file to include the extension
+  fs.rename(req.file.path, `${req.file.path}${fileExtension}`, err => {
+    if (err) {
+      console.error('Error renaming file:', err);
+      return res.status(500).send('Error renaming file.');
+    }
+
+    // Construct the new file path with the extension
+    const filePath = `${req.file.path}${fileExtension}`;
+    // console.log("File path:", filePath);
+
+    // Process the file for Information Retrieval
+    readDocForIR(filePath);
+
+    // Respond with success
+    res.status(200).send('File uploaded and processed for Information Retrieval.');
+  });
+});
+
 app.put('/uploadTP/:id', uploadTP.single('file'), (req, res) => {
   console.log("Re", req.file)
   if (!req.file) {
@@ -288,6 +319,32 @@ app.put('/uploadTP/:id', uploadTP.single('file'), (req, res) => {
 
     // Process the Excel file with the correct file path
     const reqData = updateTP(req, res,filePath);
+
+  });
+});
+app.put('/uploadIR/:id', uploadTP.single('file'), (req, res) => {
+  console.log("Re", req.file)
+  if (!req.file) {
+    return res.status(400).send('No files were uploaded.');
+  }
+
+  const fileExtension = path.extname(req.file.originalname); // Get the original file extension
+  const newFilename = `${req.file.filename}${fileExtension}`; // Add the original extension to the filename
+
+  // Rename the uploaded file to include the extension
+  fs.rename(req.file.path, `${req.file.path}${fileExtension}`, err => {
+    if (err) {
+      console.error('Error renaming file:', err);
+      return res.status(500).send('Error renaming file.');
+    }
+
+    // Construct the new file path with the extension
+    const filePath = `${req.file.path}${fileExtension}`;
+
+    // Process the Excel file with the correct file path
+    const reqData = updateDocForIR(req,filePath);
+    res.status(200).send('File uploaded and processed for Information Retrieval.');
+
 
   });
 });

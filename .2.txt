@@ -1,4 +1,4 @@
-Technical Proposal
+ 
 
 
 
@@ -6,14 +6,15 @@ Technical Proposal
 
 
 
-Institutional Capacity and Systems Needs Assessment for the State Ministry of Cooperatives and Rural Development (SMCRD)
+Draft Inception Report
 
 
 
 
 
-Frontieri Consult PLC
+     Providing Training on GIS 
 
+     Data Collection, Management, and Establishing of Geodatabase for REDD+ Investment Program (RIP) Project Intervention Areas
 
 
 
@@ -26,74 +27,90 @@ Frontieri Consult PLC
 
 
 
-October 2023
 
-Addis Ababa, Ethiopia
+Legal Name of Proposing Organization/Firm:
 
+Frontieri Consult (The former BDS Center for Development Research)
 
+Country of Registration:
 
+Ethiopia
 
+Year of Registration:
 
+2008
 
+Name of Signatory for This Proposal:
 
+Belay Fekadu
 
+Designation of the Signatory:
 
-Table of contents 
+CEO
 
+Email:
 
+info@frontieri.com
 
+Business Address:
 
+Addis Ababa, Namibia St. Lingo Tower, 8th Floor
 
-Acronyms
+Phone / Fax:
 
++251116479517/+251116478129; Fax:- +251116479778
 
 
-AfDB		 African Development Bank 
 
-ASPF		 Agricultural Sector Policy Framework 
 
-CA		 Capacity Assessment 
 
-CAMP		 Comprehensive Agricultural Master Plan 
 
-CAN		 Capacity Need Assessment 
 
-CBTF		 Capacity Building Trust Fund 
+RFP No.: UNDP - ETH-00009
 
-CPA		 Comprehensive Peace Agreement 
 
-EFCRP	 Emergency Food Crisis and Response Project 
 
-EU		 European Union 
 
-FGD		Focus Group Discussion
 
-KII		Key Informant Interview
+Contents
 
-MDTF-SS	 Multi-Donor Trust Fund - South Sudan 
+1.	INTRODUCTION	1
 
-RSS		Republic of South Sudan 
+1.1	Background	1
 
-SMCRD	 State Ministries of Cooperative and Rural Development 
+1.2	Objective	2
 
-TOR		 Terms of Reference 
+1.3	Scope	3
 
-USAID	 U.S. Agency for International Development 
+2.	TECHNICAL APPROACH AND METHODOLOGY	5
 
+2.1	Technical Approach	5
 
+2.2	Methodological Approach	6
 
+2.3	Field Operation and Assurance Mechanisms	10
 
+2.4	Data Usage	14
 
+3.	OUR PROJECT IMPLEMENTATION STRATEGIES	15
 
+3.1	Reporting Mechanism	15
 
+3.2	Ethics	15
 
+3.3	Risk Assessment and Anticipated Contingency Plans and Mitigation Strategies	15
 
+3.4	Client Engagement and Communication	16
 
+3.5	Deliverables and Workplan	17
 
+4.	REFERENCES	20
 
+5.	TEAM STRUCTURE	21
 
 
 
+	
 
 
 
@@ -108,1152 +125,930 @@ USAID	 U.S. Agency for International Development
 
 
 
-FORM TECH A: Comments/ Suggestions on the Terms of Reference 
 
 
 
-A.1. On the Terms of Reference
 
-The Frontieri team has thoroughly reviewed and deliberated upon the Terms of Reference (TOR) titled "Institutional Capacity and Systems Needs Assessment for the State Ministry of Cooperatives and Rural Development (SMCRD)" with great interest and admiration. The TOR effectively and concisely outlines the context of the Republic of South Sudan, the objectives of the assignment, the thematic areas, roles and responsibilities, as well as the methods and deliverables. In this technical proposal, we have made every effort to address all the focal points mentioned in the TOR. We would like to assure you that we will dedicate our utmost professionalism and scientific rigor to carry out the study.
 
-A.2. On the Counterpart Staff and Facilities
+INTRODUCTION 
 
-About the issue of counterpart staff and facilities, we suggest the following two points:
+Background
 
-In order to ensure the successful and punctual completion of the assignment, it is imperative that the Client provides the necessary information and approves task outputs within the designated timelines and work schedule, which will be mutually agreed upon during the inception phase of the assignment.
+Ethiopia’s forests underpin key sectors of the economy with immense potential to contribute to the social and economic development of the country through a range of environmental, ecological, economic, and social services. In addition to the diverse wood and non-wood products gained from the forestry sector, Ethiopia’s forested landscapes provide a wide range of environmental services, such as watershed protection and associated benefits related to energy and soil protection, ecotourism potential, and biodiversity conservation, which contribute significantly to the health and wealth of Ethiopia. The development challenge for the forest sector in Ethiopia is to reduce the high rate of deforestation and forest degradation while building upon opportunities for forest restoration, increasing landscape productivity, developing and promoting forest enterprises, and generating income. Given Ethiopia’s desire to increase forest cover from the current 15.5% to 30% by 2030, technical capacities need to be expanded beyond what currently exists to support and derive innovation and stronger engagement with private sector and civil society partners who can create sustainable and cost-effective forest sector development models.
 
+The government of Ethiopia supports global climate policies by being a signatory to the Paris Agreement and other international policies. The country developed the innovative Climate Resilient Green Economy Strategy (CRGE), which has been designed to address both climate change adaptation and mitigation objectives. The CRGE strategy, which was officially introduced during COP-17 in Durban in 2011, is a clear manifestation of the leadership’s commitment to pursue a carbon-neutral development regime. The UNFCCC mechanisms for reducing emissions from deforestation and forest degradation (REDD+) have been supported as emission reduction and increased carbon sequestration means in the forest sector, as proposed in the countries Nationally Determined Contribution (NDC), which was submitted in 2017.
 
+The REDD+ Investment Program (RIP) was approved by the Government of Norway and the Ministry of Environment, Forestry, and Climate Change in 2017. The program has three components that contribute towards carbon stock enhancement and emission reduction in the forest sector, namely afforestation and restoration, drivers of deforestation and degradation, and the Forest Sector Transformation Unit. Successful emission reduction may mean the country is eligible for results-based payments as agreed in the bilateral agreement between the governments of Ethiopia and Norway. Thus, ensuring that the activities implemented by the program result in emission reduction is extremely important; this requires the recording of spatial, non-spatial, and temporal locations of activities. In order to collect all this required useful information and reach decisions on the different future management, utilization, and monitoring of the existing forest resources, up-to-date data collected through different techniques and approaches is demanding.
 
-Due to the significant amount of coordination work necessary for this effort, the Frontieri team would greatly appreciate the implementation of efficient communication channels, such as email or other appropriate means, and collaborative document sharing. Additionally, the appointment of counterpart staff who can provide the necessary support and assistance would be beneficial. These measures will enable effective and direct communication among the Frontieri team, the Client, and other pertinent stakeholders throughout the duration of the project.
+Accurate, consistent, and representative information on forest resources, products, and services is important to improve forest resources and sustainable forest management, given the reporting requirements for countries to access results-based payments for REDD+. Nevertheless, at the national or even regional level, there is no accurate, comprehensive, and up-to-date information on forest biomass and volume for natural high forests, woodlands, plantations, and bamboo forests that is important to develop strategic management planning and forest policy processes (FDRE, MEFCC, 2016). There is limited information based on research and accurate data at the national or regional level for measuring and monitoring the status and changes of forest and tree resources. Despite these facts, most existing estimates of forest coverage and its changes are based on outdated inventories, which are reported to be costly and require more time. Similarly, in order to derive adequate and accurate information about the resources' location and plan for sustainable utilization, ensuring high location accuracy and a standardized geodatabase are particularly essential. The lack of map accuracy and inconsistency in data collection could cause difficulty in monitoring and evaluating the availability of resources, thereby leading to a higher risk of misuse of the data in decision-making, which may in turn lead to significant legal, social, and economic impacts.
 
+The availability of up-to-date geospatial data will help facilitate inventory, monitor changes, and assess impacts of climate, land use, and environmental changes on carbon, agriculture, and livelihoods to support planners, decision-makers, academia, and other development actors in making decisions and investing to enhance productivity, utilization, and sustainability of land resources (Abbadi, 2016, 2017, 2022). Such information has huge potential in environmental and NRM GIS applications. There is a critical need to develop innovative and cost-effective methods for regional-level C-Sequestration (CS) assessment through the integration of remote sensing (RS), GIS, statistical, direct field measurement, and laboratory analysis methods through space and time dimensions.
 
+Inventory and monitoring, spatiotemporal change detection, impact assessment and quantification of ecosystems, ecological, vegetation dynamics, carbon stock, and other interventions are vital for up-to-date decision-making by policymakers and other actors assisted by decision support tools. Databases and data infrastructure are critical inputs for information systems. Geospatial data infrastructure in the GIS environment and platform helps to generate accurate data (spatial and non-spatial) and information. We need to know what, where, and to what extent changes through space and time in development efforts. This can be done through GIS and requires capacity building in infrastructure and human resources. This training of staff in GIS will equip them to handle, analyze, manage, and interpret data on the GIS platform (Girma et al. 2015; Abbadi, 2017).
 
+Therefore, the main purpose of this assignment is to train project district staff to collect and manage all spatial and non-spatial data on project intervention activities, including (but not limited to) afforestation, assisted natural regeneration, exclosures, participatory forest management, nurseries, livelihood activities, forest boundaries, and building a geodatabase.
 
+Objective 
 
+The overall objective of the assignment is to provide training and supervise project staff to collect spatial data using GIS, GPS, geodatabase and Remote Sensing and design and establish a standard spatial database that serves as a knowledge management platform for RIP projects, and to closely follow up spatial data collection activities, do quality assurance of the data collection processes, and finally build a geodatabase by the project staff.
 
+The specific objectives of the assignment are to: 
 
+Train 119 forestry experts from RIP-AR, RIP-DD, and FSTU woredas (i.e., 63 from RIP-AR; 60 from RIP-DD; and 6 from FSTU) to collate, compile, document and organize a database and library of spatial and non-spatial data and advise on compatibility of datasets and acquisition of additional data 
 
+Closely follow up and do quality assurance of the data collection and building of geodatabase by the project staffs. 
 
+Develop an operational manual and guideline.
 
+Create Meta data for each shapefile produced, the database should include all relevant spatial data, GPS files, georeferenced photographs etc.
 
+Design a GIS database to record all spatial data of project interventions such as Afforestation/Reforestation (AR), Assisted Natural Regeneration (ANR), reducing Deforestation and Degradation (DD) and Restoration Model sites. 
 
+Scope 
 
+As stated in the ToR, the scope of this assignment is to train 119 forestry experts drawn from RIP-AR, RIP-DD, and FSTU project woredas in Amhara, Oromia, Gambella, SNNP, Sidama, and South-West regions of Ethiopia. The training will focus on the basics of GIS (spatial data handling and processing), GPS, remote sensing, maintaining, creating geodatabases and metadata, and checking the quality of the existing project data. Preparation, geodatabase development, training and all field activities and data quality control and final delivery/completion of all activities is planned to be completed within 60 days. The training will be conducted at four locations in Ethiopia namely Adama, Awassa, Jimma, and Bahirdar for 10 days each in parallel. The training participants will come from four regions namely Oromia, Amhara, previous SNNP (now, split in to Sidama and South West Region) and Gambella regions. In a nutshell, the training will cover introduction and hands-on exercise (10 days) on GIS, GPS, and where possible other data collection tools (tablets and smart phones) and spatial database. 
 
+In addition to the training, Frontieri, will be engaged in (2) the follow-up field-experts during data collection and quality output production, (3) designing and developing a unified geospatial database to store, manage and display data/information from either newly collected data, secondary data and already existing spatial data, and introduce quality assurance mechanisms including appropriate metadata which will be disaggregated at regional/project office level (4) preparation of training manual, operational manual and guideline, and (5) establishing a monitoring system. And, the whole assignment should be designed to significantly support decision making processes related to RIP and interventions, monitoring and evaluation and project reporting in almost near real time (depending on internet connection) of data collection.
 
 
 
 
 
+	
 
+	
 
 
 
-FORM TECH B: OUR UNDERSTANDING OF THE ASSIGNMENT
+Figure 1: The location map of the identified project woredas.  
 
-B.1.  Background and Rationale 
+TECHNICAL APPROACH AND METHODOLOGY 
 
-South Sudan, the most recently established nation in the world, achieved independence in 2011 after a prolonged civil war. The education system has been significantly affected by the enduring conflict, resulting in a shortage of skilled individuals as experienced civil servants have left their positions due to security concerns, especially at the state level. Furthermore, there is a lack of effective monitoring and evaluation of efforts to enhance capacity. Gender inequality is widespread within the civil services, particularly at the subnational level. Insufficient access to crucial resources such as the Internet, computers, paper, and printed forms has further impeded communication and reporting at the county level, particularly regarding revenue management and service delivery. Currently, agricultural productivity in South Sudan is alarmingly low, primarily due to the aforementioned issues in the agricultural sector. The low levels of productivity have impeded the country's progress. Overall, the prolonged civil war has resulted in significant capacity deficits, making it a matter of utmost urgency to address the issue.
+Technical Approach 
 
-Since the signing of the Comprehensive Peace Agreement (CPA) in 2005, notable endeavours have been made to enhance capacity in South Sudan. The initial measures implemented to support the development of skills were the 'Skills for South Sudan' program and the Capacity Building Trust Fund (CBTF) particularly in the agricultural sector. The Multi-Donor Trust Fund - South Sudan (MDTF-SS), which is overseen by the World Bank, included components that directly contributed to the provision of services, such as the construction of roads and classrooms. Furthermore, it provided financial resources for the renovation and equipping of key ministries including the Ministry of Agriculture and Food Security, departments, and agencies, as well as the augmentation of capacity through the engagement of consultants for crucial functional areas. Over the course of time, various partners, such as the European Union (EU), the African Development Bank (AfDB), the U.K. Department for International Development (DFID), the U.S. Agency for International Development (USAID), and the Food and Agriculture Organization (FAO), have increasingly participated in the process of capacity building within different sectors, focusing on individual, organizational, and systemic levels through various projects. However, Ex-post evaluations of capacity-building efforts supported by development partners have been highly critical, highlighting a lack of understanding regarding the severity of weaknesses in the initial context, fragmentation, an excessive focus on training compared to other aspects of capacity, insufficient duration and funding for training programs, and inadequate emphasis on private sector development.
+This section presents the technical approach that the Frontieri team will follow to provide GIS training, data collection, and geospatial database development for the REDD+ project. The overall technical approach to this is presented in Figure 2 below.
 
-The achievement of the Sustainable Development Goals requires a significant increase in resources and a substantial improvement in the ability to utilize available resources and achieve desired outcomes. It is crucial to enhance competencies in order to effectively formulate, implement, monitor, and evaluate development policies, programs, and projects within both public and private sector institutions on a national level. Moreover, it has been demonstrated that the enhancement of capacity fosters agricultural productivity and enhances food security. In light of this, the Food and Agriculture Organization (FAO) is seeking the services of a firm to assess the capabilities of the State Ministries of Cooperative and Rural Development, as well as at least one Administrative Area. The aim is to develop a comprehensive and efficient strategic plan that will enhance the performance of service delivery in both the public and private agricultural sectors. Therefore, Frontieri has prepared this Technical Proposal to evaluate the current gaps in capacity within the sector and to develop Capacity Development Plans that align with the country's long-term objectives and the Comprehensive Agricultural Master Plan (CAMP).
+Unified geodatabase development that can serve to accept, store and compile the spatial and non-spatial data for the REDD+ Investment Program (RIP) sites 
 
-B.2. Objectives and Scope of the Assignment
+Geodatabase development  
 
-B.2.1 Objectives of the Assignment
+After an intensive training, the 119 forestry experts will be required to collect data from their respective districts (ANR, AR and PFM sites in the RIP intervention area)
 
-As explicitly stated in the Terms of Reference (TOR), the primary aim of this assignment is to conduct a thorough evaluation of the individual, institutional, and systemic capacity requirements of the State Ministries of Cooperative and Rural Development (SMCRD). The ultimate goal is to formulate a comprehensive capacity development plan encompassing short-term, medium-term, and long-term objectives, which are as follows:
+The four GIS trainers, four assistant GIS trainers, and the central data manager will closely follow up the maintaining of the minimum acceptable standard of quality for the data collected 
 
-To identify and assess the various individuals or groups who have an interest or influence 
+Compiled unified spatial and non-spatial data for knowledge management will be generated. 
 
-To conduct capacity and system needs assessment 
+Training on GIS for 119 forestry experts that will come from different regions The training is organized in four centers (Hawassa, Adama, Jimma and Bahir Dar)
 
-To identify deficiencies in individual, institutional, and systemic capacities and 
+Train forestry experts 
 
-To devise strategies for enhancing individual, institutional, and systemic capacities, so as to develop comprehensive plans for capacity development.
 
-B.2.2 Scope of the Assignment
 
-The scope may be delineated by the following parameters: (i) the study areas and primary stakeholders, (ii) thematic areas and research inquiries, (iii) the duration and stages of the assignment, and (iv) the tasks and outcomes of the assignment. The duration and stages, as well as the tasks and outcomes, of the assignment, are outlined in the Work Plan and Deliverables section. Within this subsection, we will provide a concise overview of the study areas and primary stakeholders, as well as the thematic areas and research questions.
+Data collection 
 
-Study areas and key stakeholders
+Follow-up
 
-As clearly outlined in the TOR, the inquiry will be carried out in the intentionally selected states of Central Equatoria, Western Bahr El Ghazal, and Jonglei, in addition to the Ruweng Administrative Area of the Republic of South Sudan. The scope of the study encompasses government agencies and structures, specifically the national-level ministry offices (Ministry of Agriculture and Food Security, Ministry of Irrigation and Water Resources, Ministry of Higher Education, Science and Technology; Ministry of Service and Human Resource Development) collaborating with the SMCRD, as well as the employees of SMCRD. Furthermore, farmers cooperatives are also included within the target population of this investigation.
+Outcomes: 1) unified geospatial database, 2) capable trained forester staff, 3) knowledge management platform for RIP developed 
 
-Thematic Areas and/or Research Questions
+Figure 2: Overall technical approach for the GIS training and geodatabase development for REDD+ and investment program 
 
-Capacity Assessment (CA) is a systematic evaluation of an individual's, organization's, or system's capacity in relation to their desired objectives. Its purpose is to identify any deficiencies in capacity and determine the necessary actions to address them. However, Capacity Need Assessment (CNA) is not only focused on recognizing gaps but also on identifying existing capacity and latent capacity (current capacity that is neither used nor recognized) and ensuring that both are enhanced and clearly linked with the outcomes to achieve a desired result. In accordance with this, Frontieri will provide guidance on the current situation, the desired situation, and the necessary steps to achieve these in three dimensions (individual, organization, and system) and their respective thematic areas/categories to effectively meet the objectives of the assignment. The table below presents a comprehensive overview of the dimensions, thematic areas, and indicators used in identifying capacity gaps and/or developing capacity development plans.
 
-Table 1: Thematic areas and indicators
 
-S.No.
+Methodological Approach 
 
-Dimensions
+Geodatabase 
 
-Thematic areas /Categories
+The Frontieri team will design and develop a geospatial database that can accept, store and manage the RIP field/forest geospatial/non-spatial and related datasets using QGIS. Here are some of the points to consider. QGIS is an open-source Geographic Information System (GIS) software that offers a wide range of features, including vector and raster analysis, geoprocessing, geocoding, georeferencing, online mapping, and 3D visualization. QGIS supports many data formats and standards such as Shapefile, GeoTIFF, GeoJSON, WMS, WFS, and PostGIS1. Its interface is more modular and flexible, allowing one to add or remove toolbars, panels, menus, and windows based on one’s preferences and needs. 
 
-Indicators
+Moreover, in QGIS, the file geodatabase format has emerged as a very common format for storing and exchanging spatial data, particularly considering that it allows for the storage of multiple data layers and data layers that exceed the limits of other specifications.
+
+In the current REDD+ Investment Program (RIP) Project Intervention Areas database, all the activities will be entered in this QGIS project so that all stakeholders at all levels will have the same information about the status of the implementation of activities at the same time. 
+
+
+
+Data collection templates will be developed for all activities under each project. It is in these templates that all project activity data will be compiled. Their Spatial Reference System (SRS) has been proposed to be defined as WGS_1984 UTM Zone 37N. These templates are empty shapefiles having attributes built into their corresponding Attribute Table. As SRS has already been defined for each empty shapefile, data collectors should use copies of those shapefiles whenever activities data are captured and attributes constructed. The empty shape files are organized by polygon feature types.
+
+The geodatabase will include four major components as shown in Table 1 below. Under these activity types there are a number of attributes that will be incorporated in the QGIS project and their description is found in the operational manual. Data collectors are advised to read and understand what the truncated words stand for in the attribute description tables of the operational manual.
+
+Table 1: Components of the Project Intervention of REDD+ Investment Program (RIP) 
+
+S/N
+
+Intervention Type
+
+Code
+
+Feature Type
 
 1
 
-Individual level
+Plantation Site (AR)
 
-Knowledge, Technical and functional skills, competencies, and Attitude
+01
 
-Types of knowledge and skills needed
-
-Requirements for knowledge, experience, and skill levels
-
-Practices for professional development 
-
-Innovative competencies 
+Polygon
 
 2
 
-Organizational level
+Restoration Site (ANR)
 
-Governance
+02
 
-The lucidity pertaining to the motivation, purpose, and stability of the organization can be ascertained through a comprehensive evaluation of its guiding principles, structure, and oversight mechanisms.
-
-The dedication of governing or advisory boards in the organization and coordination of pertinent knowledge and expertise, as well as the provision of guidance, support, and supervision to the staff and operations of the organization
-
-The organization's capacity to sustain uninterrupted operations and effectively oversee programs in the event of a leader's absence or a change in leadership
-
-The accessibility and compliance with operational policies
-
-Organizational management
-
-A comprehensive and budgeted strategy for an extended period of time, along with yearly tactical plans.
-
-The capacity of the organization to prioritize strategies for identifying and approaching suitable donors, with a resource mobilization plan that is linked to the budget of the strategic plan
-
-Communication Strategy: Documentation and Reporting
-
-The relationships with relevant stakeholders to facilitate program coordination, partnering, and resource sharing.
-
-The organization’s capacity to plan for advocacy activities
-
-The ability of the organization to best utilize its members to further its cause
-
-Program management
-
-The involvement of the community in designing, monitoring, and implementing activities
-
-A detailed plan with objectives, targets, indicators, activities, and a timeline as well as appropriate staffing, budgeting, and continual monitoring.
-
-Monitoring and Evaluation and Quality Assurance systems 
-
-Human resources
-
-the organization’s ability to maintain a satisfied and skilled workforce, manage operations and staff time, and implement quality programs
-
-Job Descriptions and Staff Supervision
-
-field and office-based volunteers and interns with clear tasks, training, supervision, and recognition to have less turnover and allow them to make significant contributions to the organization
-
-Financial management
-
-The quality of the organization’s financial system and policies and procedures and the staff’s knowledge of the system
-
-The internal controls to adequately safeguard the organization’s assets, manage internal risk, and ensure the accuracy and reliability of accounting data.
-
-Financial Documentation and Reporting
-
-Financial Planning and Sustainability
+Polygon
 
 3
 
-System-level
+Participatory Forest Management Site (PFM)
 
-Factors that have the potential to generate or address capacity deficiencies, as well as enable or restrict the progress of capacity enhancement
+03
 
-Adaptation and integration to: 
+Polygon
 
-Policies, 
+4
 
-Legal frameworks, rules and norms; 
+Project Nurseries
 
-Values governing mandates; 
+04
 
-Priorities; 
+Polygon
 
-Modes of operation; 
+In addition to developing the database, trainees will get to learn QGIS architecture, skills to create tables and several other database objects including views, functions and sequences. The designed, developed and deployed unified geospatial database will then store, manage and display data/information from either newly collected data, secondary data or already existing spatial data, and it will have quality assurance mechanisms. Moreover, metadata for each of the collected datasets/shapefiles will be created. 
 
-Political environment and 
+A QFieldCloud-based mobile/tablet data collection will be employed for real-time synchronization and merging of the collected data from each duty station (Addis Ababa, Adama, Hawassa, Jimma, Bahir Dar, and project districts). During the training, each team will be capable of developing its own QGIS geodatabase and QFieldCloud.
 
-Culture or traditional practices
+A pre-testing exercise will be done by the Frontieri staffs first and later after the training there will be a pilot-testing of the data collection during the training session, syncing as well as managing the database. The Frontieri team will improve the database and data collection app if there are requirements for adjustments. Th Frontieri team will design and establish a geodatabase (including metadata) and train project staffs on running and maintaining the database that serve as knowledge management platform for REDD+ Investment Program (RIP). 
 
+The training will include a data quality assurance module to check for errors in the datasets, even when they appear accurate. Data quality assessment and control are primary tasks in data management for producing good end products, and they are a part of the training for data collectors. The quality assurance mechanisms for this assignment will include:
 
+Applying topology checker and rule and editing topological errors
 
-B.3. Proposed Roles and Responsibilities for the Assignment
+Checking for errors in an existing Shapefile 
 
+Provision Of Training 
 
+Target trainees and stakeholders 
 
-In order to formulate a responsive approach to address the identified deficiencies, the team at Frontieri shall undertake an evaluation of the capabilities of the State Ministries of Cooperative and Rural Development, as well as at least one Administrative Area. The Frontieri team shall be extensively engaged in the qualitative, managerial, and analytical aspects of this process. Drawing upon the Terms of Reference (TOR) and the expertise that Frontieri has garnered from comparable undertakings, Table 2 outlines the primary obligations of the key stakeholders.
+A total of 119 forestry/project staff/experts from 120 woredas will be trained. The training will be conducted in 53 woredas from RIP-AR, 60 woredas from RIP-DD, and 6 woredas from FSTU (listed in the ToR). For the Dejen and Werejarso projects, one team will manage the training, and hence only six trainees from seven woredas of FSTU project districts will participate.
 
+Location and venue of the training 
 
+The forestry experts will be trained in four clusters: Adama, Hawassa, Bahir Dar, and Jimma. The RIP AR, in collaboration with the two components, will assign the trainees to the identified clusters. The class size will range from 25 to 35 individuals per classroom. The trainers will be assigned to the nearest training town based on geographic proximity. To provide hands-on GIS software training, Frontieri will use well-established GIS computer laboratories from universities in the training towns through partnership agreements to have spacious enough rooms for the trainees. The trainers will move around easily to supervise and provide support for the trainees. The training room should have proper ventilation. The total lecture day will not be more than one day out of the 10 days. A course outline containing course schedule and learning objectives and outcomes will be provided to the trainees. A course outline containing course schedule and learning objectives and outcomes will be provided to the trainees.
 
-Table 2: Proposed Roles and Responsibilities for the Stakeholders
 
 
+Training Contents 
 
-Stakeholders
+The training will include the following components with hands-on-practice sections.   
 
-Roles and responsibilities
+1. Basics of GIS & QGIS Concepts
 
-FAO
+	1.1 Basics of GIS concepts
 
+	1.2 Why QGIS?
 
+2. Creating and Exploring a Basic Map
 
-Ensuring the provision of substantial contributions to all reports and products, while ensuring their alignment with the project objective, and agreed methodology, as well as the policies and frameworks of the Food and Agriculture Organization (FAO).
+	2.1. An Overview of the Interface
 
-Ensuring comprehensive quality assurance and project coordination on behalf of the Food and Agriculture Organization (FAO).
+	.2. Adding your first layers
 
-Adhering to the overarching terms of reference (TORs), conducting periodic reviews, and making necessary adjustments in the event of significant modifications.
+	2.3. Navigating the Map Canvas
 
-Frontieri Team and its local partner
+	2.4. Symbology
 
+3. Classifying Vector Data
 
+	3.1. Vector Attribute Data
 
-Ensuring the timely and high-quality delivery of all products as agreed upon in the Terms of Reference (TOR), while closely collaborating with the pertinent FAO teams
+	3.2. Labels
 
-Identifying the team possessing the appropriate expertise, knowledge, and skills to undertake the diverse areas of work.
+	3.3. Classification
 
-Frontieri is committed to ensuring comprehensive quality assurance and project coordination, encompassing data management and the timely completion of all activities.
+4. Coordinate Reference System (CRS)
 
-Ensuring adherence to research ethics, confidentiality, and privacy protocols.
+	4.1 Overview of Projection Support
 
-Adhering to the overarching terms of reference (TORs), conducting periodic reviews, and making necessary adjustments in the event of significant modifications.
+	4.2 Layer Coordinate Reference Systems	
 
-Other Stakeholders 
+	4.3 UTM coordinate zones of Ethiopia
 
-Assist in the provision of support and ensure the seamless execution of the assigned task.
+5. Creating Vector Data	
 
-Federal and State governments of the Republic of South Sudan (RSS)
+	5.1 Creating a New Vector Dataset
 
-Providing a letter of support for the purpose of data collection and assisting in the execution of all tasks pertaining to the assignment in the Republic of South Sudan.
+	5.2 Feature Topology
 
+6. Georeferencing a Map
 
+7. Quality Assurance and Control	
 
+	7.1 Applying Topology Checker and Rule and Edit Topological Error
 
+	7.2 Check for Errors in an Existing Shapefile
 
+8. Digitize RIP Project Implementation Sites into a QGIS Project
 
+9. QField and QFieldCloud
 
+Training packages (Training manual, lecture material, exercises, software/packages/extensions, videos, references) will be available to the trainees. 
 
+The trainees may have differences in skills, and they will be assessed with pre- and post-training exams. Low-performing field staff will receive additional coaching during training, as well as frequent supervision during field data collection. This information will be reported to the client. Additionally, some of the locations that we foresee (5% checks) could be these sites. To improve communication among data collectors, Frontieri plans to create a group account for exchanging information. To facilitate this, it is important that the data collectors have mobile phones. In case they do not, they can use Frontieri’s tablets to communicate with other teams when a Wi-Fi connection is available. The communication can be one-to-one or for common issues with the group account.
 
+The training program will require trainees to work on their project site during the training. Trainees will be required to prepare a base-map (google earth) and create different thematic layers that will assist them during field work. At the end of their training, they will be required to work on their project site and handover a small project report. High resolution GeoTiff layers will be created for their project sites after they create the general boundary of their project site. If the client provides specific project site boundaries, it would be helpful to inform trainees prior to their training. This will enable them to create a basemap that will be useful for their field work.
 
+Data Collection 
 
+The data to be collected and the method by which the data will be collected are outlined as follows. 
 
+Input data to be used 
 
+Google Satellite Hybrid imagery
 
+Administrative Boundary Shape file 
 
+Agroecological map (MoA, 2007 map)
 
+Biophysical data (Climate, soil, topography, other land characteristics)
 
+Attribute data to be collected 
 
+S/N
 
-FORM TECH c: Technical and Methodological Approach
+Activity Attribute Lists
 
- 
+S/N
 
-C.1. Technical Approach 
-
-The main goal of this assessment is to evaluate the capacity needs of individuals, institutions, and systems within the State Ministries of Cooperative and Rural Development (SMCRD). Once the capacity needs are identified, the objective is to propose strategic and targeted capacity development strategies. Capacity needs occur when there is a difference between the necessary competencies for effective performance and the actual knowledge and skills possessed by individuals, organizations, or at the system level. The capacity need assessment process involves three steps: identifying the existing capacity, identifying the desired capacity, and determining the gap between the two. The assessment will help develop a Capacity Development Plan to strengthen the system and improve the current inadequate institutional capacity at both national and state levels, with the aim of enhancing agricultural productivity and food security in the country, as outlined in the Terms of Reference. To successfully complete this task, the Frontieri team will follow the approach depicted in Figure 1.
-
-
-
-
-
-Yes
-
-Feedback
-
-Consolidated capacity needs and system assessment report
-
-Formulation of capacity development plan
-
-Identification of capacity gaps
-
-Conduct individual, institutional, and systemic capacity need  assessment
-
-
-
-Organize and facilitate a stakeholder preparatory consultative workshop
-
-Stakeholders’ analysis
-
-Preparation and Submission of Inception Report
-
-Desk Review
-
-KIIs, FGDs and Consultative Meetings 
-
-
-
-Figure 1: Flow chart showing the general approach to address study objectives
-
-
-
-C.1.1. Stakeholders’ analysis
-
-In conducting the stakeholder analysis for the Institutional Capacity and Systems Needs Assessment of the State Ministry of Cooperatives and Rural Development, it is crucial to identify and engage relevant stakeholders. This analysis aims to assess the existing institutional capacity and identify the needs of the ministry, in order to effectively support and develop the cooperative and rural development sectors. By identifying key stakeholders such as government officials, cooperative members, rural communities, development organizations, and other relevant entities, we can ensure a comprehensive understanding of the priorities, concerns, and expectations of those involved. This stakeholder analysis will serve as a valuable tool in informing the planning and implementation of strategies, policies, and programs targeted towards enhancing the institutional capacity and systems of the State Ministry of Cooperatives and Rural Development.
-
-To develop a list of potential stakeholders for the Institutional Capacity and Systems Needs Assessment of the State Ministry of Cooperatives and Rural Development, we will consider their interest in and potential impact on the project. The stakeholders' importance and relevance will then be ranked using a stakeholder analysis matrix that takes into account their interests and potential influence in supporting project objectives. Once the list of potential stakeholders is developed, they will be categorized and grouped into different groups, following the matrix below, in order to prioritize them based on their importance. The commonly used method, as suggested by Bryson (1995), will be employed for this purpose. We will use the format indicated in Table 3 and Figure 2 for specific stakeholder details and their respective interests in the project.
-
-Table 3: Stakeholders analysis and ranking table on a scale of 1 to 4
-
-S.No
-
-Name of stakeholder
-
-Interest in Institutional Capacity and Systems Needs Assessment for the State Ministry of Cooperatives and Rural Development
-
-Financial interest
-
-Interest in receiving quality services
-
-Interest in supporting rural development and cooperative initiatives
-
-Interest in effective governance and performance
+Activity Attribute Lists
 
 1
 
+Identification Number 
 
+29
 
-
-
-
-
-
-
-
+silvicultural practices (species site matching, method of planting, preferred spacing, mulching, pruning, thinning, harvesting)
 
 2
 
+Region Name
 
+30
 
+logged area
 
+3
 
+Zone Name
 
+31
 
+Altitude
 
+4
 
+Woreda Name
 
+32
 
+aspect North-east, South-east, North-west, South-east)
 
+5
 
-Influence or power of stakeholders
+Kebele Name
 
-High
+33
 
-Meets their  needs
+Presence of natural Regeneration (Yes, No)
 
-Key players
+6
 
-Low
+Intervention year
 
+34
 
+Forest expansion (% of Area, % of species per area)
 
-Least important
+7
 
+Mode of Intervention (A/R, ANR, PFM)
 
+35
 
-Shows consideration
-
-
-
-Low
-
-High
-
-Interest of stakeholder
-
-Figure 2: Stakeholders’ analysis matrix
-
-
-
-
-
-C.1.2. Conduct individual, institutional, and systematic capacity need assessment
-
-
-
-As clearly stated in the Terms of Reference (ToR), the capacity needs assessment aims to identify critical gaps in capacity and propose strategic and targeted capacity development strategies for the State Ministry of Cooperatives and Rural Development. These strategies are intended to enhance the ministry's effectiveness and efficiency in fulfilling its core mandates. In order to achieve the objectives of this assignment, the Frontieri team will conduct a comprehensive capacity needs assessment at three levels: individual, institutional, and systemic.
-
-
-
-Individual Capacity Assessment: Frontieri will assess the skills, knowledge, and competencies of ministry staff at both National and state levels, identifying areas for improvement and any existing gaps. The team will evaluate the effectiveness of training and development opportunities provided to staff, as well as identify individual training needs and career development aspirations.
-
-
-
-Organizational Capacity Assessment: Frontieri will evaluate the organizational structure, functions, and processes within the SMCRD. Key areas such as policy formulation, human resources, financial management, and coordination mechanisms will be assessed to determine the ministry's institutional capacity. The adequacy of staff resources, including human resources, finances, and facilities, will be analyzed. Governance mechanisms, coordination mechanisms, and decision-making processes will also be evaluated. Areas in need of additional support, such as strategic planning, monitoring and evaluation, and knowledge management, will be identified. Frontieri will conduct a SWOT analysis to identify the ministry's capacity strengths, weaknesses, opportunities, and threats.
-
-
-
-Systemic Capacity Assessment: Frontieri will examine the broader systems and contexts in which the SMCRD operates, including legal frameworks, policies, and interagency collaborations. The alignment between the ministry's goals and objectives with national development plans and policies will be assessed. The team will identify systemic barriers and constraints that hinder effective cooperative and rural development, and propose strategies to address them.
-
-
-
-C.1.3. Identification of capacity gaps and Formulation of capacity development plan
-
-To effectively identify capacity gaps and formulate a capacity development plan, the Frontieri team will utilize various data sources such as qualitative data from a stakeholder preparatory consultative workshop, KIIs, FGDs, and document reviews. By analyzing this collected data, the team will synthesize the findings to identify common themes, strengths, weaknesses, and opportunities for capacity development. Priority areas for capacity-building interventions will be determined based on factors like urgency, feasibility, and potential impact.
-
-Once the gaps are identified, the Frontieri team will prepare a comprehensive capacity needs assessment report. This report will encompass the main findings, conclusions, and recommendations derived from the analysis. It will be presented to relevant stakeholders, including ministry officials, development partners, and other key actors involved. Furthermore, specific recommendations for enhancing individual, institutional, and systemic capacities within the SMCRD will be provided in the report. To facilitate the implementation of capacity-building interventions, an action plan will be developed. This action plan will outline the necessary steps, timelines, and responsibilities of various stakeholders involved in the process. Generally, Frontieri aims to optimize the identification of capacity gaps and the formulation of a comprehensive capacity development plan by analyzing data to be collected, generating actionable recommendations, and creating an action plan for implementation. The overall technical approach for capacity assessment is depicted in the Figure 3 below. 
-
-
-
-Figure 3: Overall technical approach capacity assessment
-
-
-
-C. 2. Methodological approach 
-
-C.2.1. Data Types and Sources 
-
-The overall approach for this assignment is qualitative in nature, in line with the objectives and requirements specified in the assignment guidelines and the Terms of Reference (ToR). Accordingly, the primary and secondary data will be gathered through qualitative research methods and systematically cross-validate the data to ensure its quality. To achieve this, a variety of qualitative data collection methods will be employed, including Desk Review of relevant documents, collecting qualitative data from a stakeholder preparatory consultative workshop, Key Informant Interviews (KIIs), and Focus Group Discussions (FGDs). The target population for this data collection includes the State Ministries of Cooperative and Rural Development, as well as at least one Administrative Area and other key stakeholders. The assessment will encompass capacity development at various levels within these entities, including individual, organizational, and systemic levels. The data will be systematically collected to achieve the general goal of developing comprehensive capacity development plans that address the identified capacity needs and gaps at these three levels. By triangulating different qualitative data collection methods, the assessment seeks to collect robust and reliable data to inform capacity development initiatives.
-
-C.2.1.1. Desk review
-
-As part of the capacity needs assessment and formulation of the capacity development plan, the Frontieri team will conduct a comprehensive review of various aspects. This review will be the first and essential task in the process and includes the following aspects: 
-
-
-
-Review Mandate and Policy Frameworks: The team will analyze the strategic documents and policy frameworks that define the mandate of the State Ministry of Cooperatives and Rural Development (SMCRD). This includes assessing the alignment of the ministry's activities with its mandate and evaluating the effectiveness of its implementation.
-
-
-
-Evaluate Efficiency and Effectiveness: The team will assess the efficiency and effectiveness of SMCRD in fulfilling its mandates. This includes reviewing the budget allocation and expenditure, work procedures, and their adequacy in meeting the ministry's objectives.
-
-
-
-Review Working Relations: The team will examine the working relations between SMCRD and the national Ministry of Agriculture and Food Security (MAFS). This will involve evaluating the coordination, collaboration, and communication between these two entities in implementing rural development and cooperative initiatives.
-
-
-
-
-
-Assess Staff Qualifications and Experience: The team will evaluate the qualifications, experience, and staffing of the ministries. This includes reviewing the competencies and expertise of the staff to ensure they have the necessary skills and knowledge to effectively perform their duties.
-
-
-
- Conduct Research and Analysis: The team will conduct in-depth research and analysis of theories of change and secondary sources of information. This entails reviewing relevant documents, publications, guidelines, strategies, and audio-visual materials related to cooperative and rural development. We will also access databases and other secondary data sources from governmental and non-governmental institutions.
-
-
-
- Thoroughly Analyze Data: The data and information collected from the above sources will be analyzed in a comprehensive manner to reach conclusions. The team will utilize various analytical tools and techniques to derive meaningful insights and identify capacity development needs and priorities.
-
-
-
-C.2.1.2. Generating qualitative data from a stakeholder preparatory consultative workshop 
-
-As clearly stated in the TOR, one of the specific tasks of a consultancy firm is to organize and facilitate a stakeholder preparatory consultative workshop. If our firm is selected, Frontieri will create a safe and inclusive environment in the workshop to encourage stakeholders to freely express their opinions and experiences. We will use an attentive listener and using probing questions approach to capture detailed qualitative data that will contribute to a comprehensive understanding of stakeholder perspectives during the workshop. Additionally, we will use the following approach to generate relevant data for the assignment during the workshop. 
-
-Pre-workshop surveys/questionnaires: Prior to the workshop, we will design and distribute surveys or questionnaires to the stakeholders. These will include open-ended questions to gather stakeholders' opinions, experiences, and suggestions related to the workshop's theme or objectives. The qualitative data collected through these surveys will contribute to a comprehensive understanding of stakeholder perspectives.
-
-Focus group discussions: During the workshop, we will organize focus group discussions (FGDs) where small groups of stakeholders can engage in open and structured conversations. FGDs allow for in-depth exploration of topics, enabling participants to share their experiences, ideas, and concerns. Frontieri team will guide the discussions, encouraging active participation and generating rich qualitative data.
-
-Interviews: Alongside the workshop, we will conduct individual key informant interviews with selected stakeholders. These interviews can be one-on-one or conducted in small groups. By posing open-ended questions and allowing stakeholders to share their insights, experiences, and perspectives, we will gather qualitative data that provides a deeper understanding of their perspectives and needs.
-
-
-
-Observations and note-taking: As the workshop facilitator, Frontieri will actively observe and take notes during the workshop sessions. Pay attention to the interactions, discussions, and dynamics among participants, noting any interesting points, emerging themes, or perspectives. These observations, coupled with the notes, can add valuable qualitative data to the overall analysis.
-
-
-
-Workshop artefacts and outputs: The workshop may generate various artefacts, such as brainstorming sheets, group exercises, or presentations. These can serve as additional sources of qualitative data. Analyzing the content, ideas, and recommendations within these artefacts can provide insights into the stakeholders' perspectives and priorities.
-
-
-
-C.2.1.3 Key Informant Interview
-
-This will involve more technical discussions with key stakeholders, including ministry officials.  This will involve conducting two Key Informant Interviews (KIIs) with each of the ministers from the following ministries: Ministry of Agriculture and Food Security; Ministry of Irrigation and Water Resources; Ministry of Higher Education, Science and Technology; Ministry of Public Service and Human Resource Development; and State Ministry of Cooperatives and Rural Development (SMCRD). At the state level, our plan is to conduct 12 KIIs, with four KIIs in each of the following states: Central Equatorial, Western Bahr El Ghazal, and Jonglei. Furthermore, we will conduct an additional four KIIs at the administrative area level specifically in Ruweng. In total, we anticipate conducting at least 24 Key Informant Interviews with these key stakeholders. However, we recognize the importance of data saturation in the research process. Therefore, the number of KIIs may be modified based on the achievement of data saturation. For details, please refer to Table 3 below. 
-
-Table 4: Participants and Number of KIIs
-
-Methods of Data collection
-
-Target groups
-
-Specific areas Sample Size
-
-Total Sample Size 
-
-Remark
-
-
-
-Central Equatorial (Juba) 
-
-Western Bahr El Ghazal (Wau)
-
-Jonglei (Bor)
-
-Ruweng (Pariang)
-
-KIIs
-
-National level
+Management plan and planning (Yes, No)
 
 8
 
--
+Existing Plant Species in the intervention area
 
--
+36
 
--
+Fire protection (Yes, No)
 
-8KII
+9
 
-Two KII with each of the ministers of: 
+Annual Survival Rate of Seedlings
 
-Ministry of Agriculture and Food Security, 
+37
 
-Ministry of Irrigation and Water Resources, 
+Community involvement (Number of community members)
 
-Ministry of Higher Education, Science and Technology; 
+10
 
-Ministry of Service and Human Resource Development
+List of Constructed Soil and Water Conservation Structures
 
-State level
+38
 
-4
+Year of the PFM site 
 
-4
+11
 
-4
+Post planting Management Activities
 
--
+39
 
-12KII
+Invasive species
 
-KII with key staff of different departments of SMCRD. 
+12
 
-Administrative area level
+Ownership
 
--
+40
 
--
+Artificial surfaces (Number of homestead/ha.) 
 
--
+13
 
-4
+Data Collector
 
-4KII
+41
 
-Total
+Artificial surfaces (No. of boreholes/ha.)
 
-24KII
+14
 
+Date of Data Collection
 
+42
 
+Name of PFM site
 
+15
 
-C.2.1.4 Focus Group Discussions
+01= Plantation Site 02= Restoration Site 03=Participatory Forest Management Site 04 = Project Nurseries
 
-Frontieri will facilitate focus group discussions (FGDs) as part of the research activities. These FGDs will involve two sessions with SMCRD staff and four sessions with farmer cooperatives and/or farmers' organizations in each specific study area. In total, at least 24 FGDs will be conducted, as outlined in Table 4. The participants of these FGDs will include staff members of SMCRD and farmer cooperatives. The group formation will take into account the representation of various demographics such as age and sex. This ensures diverse perspectives and experiences are captured during the discussions. To guide the FGDs, a semi-structured questionnaire guide will be developed specifically for this purpose. The discussions will be conducted in small groups of 6-10 people, with participants purposively selected from the target groups. To ensure a meaningful representation of the stakeholders, the participants in the FGDs will be organized based on gender and age categories. This includes forming women's groups consisting of adult women and female youth, as well as male groups consisting of adult men and male youth. For more detailed information, please refer to Table 4.
+43
 
-Table 5: Participants and Number of FGDs
+Membership requirement (Yes, No)
 
-Target groups
+16
 
-Specific areas Sample Size
+Name of the restoration site
 
-Total Sample Size
+44
 
-Remark 
+Income generated (Yes, No), If yes, how much/annum)
 
-Central Equatoria (Juba) 
+17
 
-Western Bahr El Ghazal (Wau)
+Agro Climatic Condition
 
-Jonglei (Bor)
+45
 
-Ruweng (Pariang)
+, how much income /annum
 
-SMCRD staff 
+18
 
-1 FGD with male staff &
+Annual mean temperature in 0C
 
-1 FGD with female staff 
+46
 
-1 FGD with male staff &
+Number of members
 
-1 FGD with female staff
+19
 
-1 FGD with male staff &
+Annual mean rainfall
 
-1 FGD with female staff
+47
 
-1 FGD with male staff &
+Permitted products for collection (Yes, No)
 
-1 FGD with female staff
+20
 
-8 FGD
+Soil Type
 
-FGD will be conducted with male and female staff of the SMCRD separately. 
+48
 
-Farmer cooperatives/ Farmers organization
+Security Involved in forest protection/ guarding – Yes/No), If yes, how many guard hours/annum?
 
-2 FGD with male staff &
+21
 
-2 FGD with female staff
+Land Form Type (Plain, Mountain, Plateau, Hills, Ridge and escarpment)
 
-2 FGD with male staff &
+49
 
-2 FGD with female staff
+how many guard hours/annum?
 
-2 FGD with male staff &
+22
 
-2 FGD with female staff
+Slope Class in Percent (0-2, 2-5, 5-8, 8-15, 15-30, 30-60, >60)
 
-2 FGD with male staff &
+50
 
-2 FGD with female staff
+Capacity (Number of seedlings per/annum)
 
-16FGD
+23
 
-FGD will be conducted with male and female farmers' cooperatives/farmers' organization of the study site separately
+area/size of the Plantation/restoration/PFM/Project Nursey site in Ha
 
-Total
+51
 
-6
+Facility (Yes, No) If yes, areas compost production, water availability, Availability of pots, Presence of shades)
 
-6
+24
 
-6
+Restoration type
 
-6
+52
 
-24FGD
+Yes/ No: Level of community engagement and participation 
 
+25
 
+purpose of the plantation
 
+53
 
+Challenges faced during implementation (seed availability; seedling availability; availability of appropriate tools) 
 
-C.3 Fieldwork Operations and Data Quality Assurance Procedure 
+26
 
-This section provides an overview of the procedures and mechanisms that will be employed by the Frontieri team to ensure the quality of data during the fieldwork for the Institutional Capacity and Systems Needs Assessment of the State Ministry of Cooperatives and Rural Development. The team will adhere to a standardized field procedure that encompasses a wide range of actions to be executed. Frontieri's well-established internal control system, which has been in place for a significant period of time, will enable us to effectively monitor all aspects of data collection and management, ensuring compliance with the required quality standards. Figure 3 depicts the comprehensive data quality assurance procedure that has been adopted for the fieldwork.
+management unit
 
+54
 
+The proposed solutions (Availability of NGO support, Government support, training support etc.)
 
+27
 
+Roads
 
-Data Cleaning 
+55
 
-Data Verification
+Attached Photograph
 
-Field Data Collection
+28
 
-Debriefing 
+The health of the plantation
 
-Pilot Testing
+ 
 
-Training of Field Staffs
+ 
 
-Translation of Data Collection Tools
 
-Recruitment of Field Staffs
 
 
 
+Data Collection Methods
 
+Depending on the requirement, different data collection methods can be used. For example:
 
+Exploratory Field survey
 
+Collect relevant secondary information from existing geoportal or from project office 
 
+Field validation of actual sample points using GPS 
 
+Obtaining the existing shapefile and GPS location of the A/R, ANR, and PFM sites from each selected project woreda (120 woredas);
 
+location accuracy of each dataset will be examined by overlaying them on top of reliable topo-maps from official data source such as Ethiopian Mapping Agency.
 
+Actual field survey
 
-Developing & Reviewing Data Collection Instruments 
+Measurement and observation (biophysical factors, georeferenced data using GPS/Tablet)
 
-Reviewing Documents Pertinent to the Assignment
+Measurement of site information, boundary delineation 
 
+Field Operation and Quality Assurance Mechanisms 
 
+Field operation 
 
+Frontieri believes that careful management of fieldwork activities is essential to complete the data collection in time, within the scope of the available budget and with high data quality that meets client’s expectation. For the current field data collection, Frontieri is strongly committed to ensuring that the field data collection activities are conducted following acceptable ethical procedures that involve several activities, such as training of field staff, logistics arrangement, pre-testing and pilot testing of instruments, organizing debriefing sessions (before and after data collection), deployment of field staff, field monitoring, reporting, and communication with the UNDP project team at regular intervals. 
 
 
 
+Resources 
 
-Data cleaning phase
+Frontieri has a well-established Human Resources and Logistics Division responsible to provide all relevant and required resources during filed staff training as well as during the fieldwork. In this regard, Frontieri will arrange the following logistics for the survey.  
 
-Data Collection phase
+Training Hall: Frontieri will arrange well-furnished training halls equipped with all relevant training facilities in those universities that have GIS laboratories around the training towns. Each hall would accommodate up to 35 participants. In addition to the GIS software, relevant training facilities, including projectors, high-speed broadband internet, a home theatre audio system, and refreshments will be readily available. 
 
-Training and Piloting Phase 
+Electronic Devices: Frontieri has more than 400 Samsung TAB-A Tablets with features of 8 inches (20.32 cm) touch screen for daily use, 5000 Am battery with long life after charging, and a 4 GB RAM with 32 GB storage capacity. Moreover, we also provide power banks, charging-doc, and other relevant data collection materials. For this assignment, Frontieri will provide 119+ tablets for field data collection. The field data collectors will sign an agreement form to return the tablets after the end of the survey. However, if the tablets are already available at the project or with the field staff, we will use them instead.
 
-Inception Phase 
+Vehicles: Frontieri’s Logistics Division will provide field vehicles for the fieldwork in collaboration with its sister company.
 
+Health Equipment: Considering the prevailing COVID-19 pandemic and other safety precautions, Frontieri will provide relevant health and safety equipment, such as face masks, sanitizers, and other relevant emergency first-aid kits, to field staff as well as respondents.
 
+Quality Assurance 
 
-Figure 4: Data quality assurance mechanisms at Frontieri
+Monitoring quality during data collection is one of Frontieri’s key strategies to ensure high-quality data. During the pre-data collection and while-field data collection, our data management team will monitor and ensure data quality using the following techniques:
 
-C.3.1. Fieldwork Operation Management
+Pre-testing and standardization of the tool: Once the field data collection tool is developed, contextualized and programmed, we will perform office-based pre-testing to standardize the data collection instrument. During the pre-testing, we will check the logical flow of questions, typological issues, language issues, inconsistencies, etc. This will be shared to the client for comment.
 
+Pilot survey: After completing the field staffs training, a pilot survey will be carried out prior to the beginning of the actual survey on the forest area near the training sites. The pilot testing site should resemble the actual surveying site as much as possible. The field team will not be informed that it is a pilot survey. Every input data that is included in the final survey will be piloted prior to launching. Since this data collection is undertaken using digital technology, the pilot survey is intended to help field testing of both the survey program and devices. Based on the piloting feedback, corrections will be made to the final tool and programming.
 
+Pilot test supervision and team debriefs: During the pilot survey, a team from Frontieri will accompany the field staff to guide the pilot testing and tool administration. Supervisions will be made with the field staffs to review any challenges faced, allow for questions and clarifications, and provide feedback to the wider group. These are especially important at the early stage of the data collection activity to ensure that proper data collection habits are formed.
 
-Frontieri recognizes the importance of effective fieldwork management to ensure the timely completion of data collection within the available budget and to maintain high data quality that meets the client's expectations. In the current assignment for the Institutional Capacity and Systems Needs Assessment, Frontieri is fully committed to conducting field data collection activities in accordance with ethical procedures. The data collection process will involve several activities, including the recruitment of suitable field staff, logistical arrangements, training for field staff, translation and back-translation of qualitative data collection checklists, pre-testing and pilot testing of checklists, organizing debriefing sessions before and after data collection, deploying field staff, conducting field monitoring, and regular reporting and communication with the Food and Agricultural Organization research team.
+Accompaniment and supervisor checks: The Frontier team (GIS and assistant trainee) will strictly follow the data collection procedures introduced at the training and directly observe those who need support. Moreover, Frontieri will ensure that at least 5% of the study sites (This will be discussed and agreed upon with the client) are directly observed by a Frontieri supervisor or field coordinators. Office level supervisors will check the data collectors synced data before they are archived in the unified database.
 
-To ensure the technical quality of the data, Frontieri will employ certified data managers and data collection supervisors who possess internationally recognized certifications. We have included evidence of their certifications by including their names in the staff list for this assignment. Our internal quality assurance mechanism will encompass planning, implementation, and closing phases to ensure the overall success of the data collection process.
+GIS for data quality control: All data collected from the field will be accessed from the main server by the office level supervisors. This data will be overlaid on to a high-resolution Airbus image to conduct daily checks. Erroneous shapefiles or input datasets will be notified back to the field data collector for correction. Most errors could emanate such as from improper use of projection, loss of GPS signals, negligence, lack of understanding, improper naming, and complexity of the survey area. This will be identified and immediately communicated to the field staffs/data collectors.
 
-C.3.1.1 Inputs Required in the Field Operation Management 
+Implementation and action on High Frequency Checks (HFC): The HFCs involve office level monitoring of synchronized data quality. High frequency checks provide insight into ongoing field team and data quality concerns before they become too entrenched or too late to manage. HFCs are meant to provide the evidence needed to successfully guide and manage a field team daily. If the quality of the data collected is found below the expected standard, it will be rejected and returned to the field data collectors for correction. Three different types of HFCs will be employed for this assignment: response quality, programming, and enumerator checks, as described below. 
 
-To ensure the successful completion of the assignment to the desired standard and quality, Frontieri's team will implement a comprehensive project management system. Our approach to project planning and management is focused on effectively and efficiently handling all field operation activities, taking into account time, budget, and quality considerations. Each data collection activity requires a carefully designed field operation approach that ensures seamless execution, timely completion, and the achievement of expected outcomes. In this assignment, the Frontieri team will employ various data collection strategies, a few of which are mentioned below.
+Input quality checks: The team will perform routine checks on the quality of inputs of the synchronized data while the data collection is in progress. Moreover, we will carry out test for reasonable ranges of inputs to identify the extreme values and outliers (even though this will be capped in the program considering the range of values). 
 
+Programming checks: Though we will perform rigorous check on programmed questionnaire before field deployment, there could be instances in which some minor program errors arise during the data collection period. To mitigate this, it is important for the team to frequently check if there are programming errors that need a quick fix. A newer version of the fix will be made available on their tablets from remote.
 
+Enumerators checks: Our data managers/GIS trainee expert will track the performance of the data collectors by running daily checks. We will check if the data recorded by individual data collectors are different from those of other enumerators from similar or nearby locations, or if they are different from what is expected. Any discrepancies will be communicated soon.
 
-Resources and Logistics: Frontieri have a dedicated human resource and logistics division responsible for providing all the necessary materials during field staff training and fieldwork implementation. To facilitate the smooth execution of this assignment, the following logistics will be arranged.
+Moreover, as part of the high frequency data check, we will undertake the following: (a) check for duplicates (of instruments) and remove them; (b) check if there are empty records and verify that all study areas (project area) are covered, and (c) use GPS collected daily field data that will allow the data managers/ GIS trainee expert to identify the locations of the data collector where errors are reported as well as evaluate the performance of the data collectors coverage every day and assess quality.
 
+Data quality assurance mechanisms will be done in two steps: 1) In person field checks and supervisions to some selected locations and 2) Office-level assignment of a supervisor (GIS trainee expert) to undertake spot-checks and discussion with the data collector to check that the quality of data is to the required standard, (3) Use of high-resolution datasets to check that field forms are complete and valid as per the instruction given (field implementation manual and guideline). On the other hand, data managers at the office level will continuously conduct checks, and reject/delete measurements with any error by indicating the overserved errors for re-correction. For this, the Frontieri team will:
 
+Prepare a checklist for assessing quality;
 
-Training Hall Arrangement: Frontieri’s will provide well-furnished training halls equipped with all relevant training facilities in Juba. The relevant training facilities, including projectors, high-speed broadband internet, a home theatre audio system, and refreshments will also be considered.
+Conduct testing and validation through ground trothing;
 
- 
+Generate and use random data;
 
-Electronic Devices for Data Collection: Frontieri will provide qualitative data interviewers with SONY brand audio recording devices with 4GB internal storage and dry cells. In addition, Frontieri’s have more than 400 Samsung TAB-A Tablets with features of 8 inches (20.32 cm) touch screen for daily use, 5000 Am battery with long life after charging, 4 GB RAM with 32 GB storage capacity. Moreover, we also provide power banks, charging docs, and other relevant data collection materials. 
+Cross-check with other sources;
 
+Collect data along the trainees for consistency and accuracy of later quality evaluation\
 
+Compare raw data with modeled data
 
-Vehicles: Forntieri will provide follow-up vehicles for the fieldwork in collaboration with the local vehicles and related logistics suppliers. Frontieri's logistics division will work diligently to ensure that all these logistical aspects are adequately coordinated and fulfilled to support the successful implementation of the assignment.
+The schematic workflow of activities for the general process and specifically the data quality control and assurance are shown in Figure 4. 
 
 
 
-C.3.2 Data Quality Assurance Measures for the Assignment
+Figure 4: Schematic workflow of activities
 
-To ensure the collection of high-quality data at the field level, Frontieri will follow a standard data quality assurance mechanism that will be implemented in three different phases:
+Data Cleaning and Auditing Phase  
 
+Data cleaning and auditing is the final phase of the data quality assurance mechanism. It is a continuation of the data monitoring step and starts immediately when field data collection is completed. It enables the determination of inconsistent, inaccurate, incomplete, or unreasonable data by generating error-log sheets, and ensures the overall integrity of the data quality. Along with data cleaning, data auditing will be performed to ensure that the required features of the geodatabase from the respective study site are met to achieve the completeness dimension of data quality of the non-spatial data. For the spatial data, the boundary of the features and attributes will be checked to ensure they are properly captured, maps are overlapped, and portions of the feature are not included in the polygon. All these and others will be covered during data monitoring and data cleaning stages. The cleaning process for the non-spatial data will include, but is not limited to: 
 
+Checking outliers: Often any data point that is three standard deviations (3D) away from the mean of the same data point for all observations will be excluded from the cleaned data set. In this regard, we will discuss with the client (research team) as to which approach, we should use to clean the outliers; 
 
-The Preparation Phase 
+Checking variable labels: The cleaned data set will be checked for variable labels description; 
 
-Frontieri undertakes various activities during the preparation phase to ensure data quality before the main data collection begins. These activities include:
+Ensuring transparency: We will carefully document each step and take measures to clean the data so that anybody could replicate the process at any time in the future;
 
-Developing, Translating, and Pre-testing Tools
+Data Usage 
 
-Developing tools: We are of the opinion that we will create the checklist/interview guide for the FGD and KII. Consequently, we will thoroughly examine, contextualize, and standardize the checklist/interview guide and seek approval from the Food and Agricultural Organization. The preliminary tools will undergo a meticulous process of review and improvement and will be pre-tested to ensure their reliability and validity. We have delineated below the principal components and procedures that are guiding the tool design process:
+Frontieri Consult will adhere to all the data usage and contract requirements provided in the ToR. The major data usage and contract requirements are listed below.  
 
-Building blocks of the tools: The foundational elements of the tools are being constructed based on the thematic areas and associated research inquiries, which serve as a structural framework.
+Frontieri will comply with the fact that the completed datasets will be the property of the UNDP. Hence, Frontieri team will provide the compiled spatial and non-spatial cleaned datasets through the geodatabase for the client; 
 
-Checklists Tailored to Different Stakeholders: The tools will be customized to cater to the primary stakeholders and target groups involved in the assignment, which encompass SMCRD and collaborating ministry offices at the national level, as well as farmers cooperatives. This customization is imperative due to the varying roles and responsibilities of different agencies, as well as the diverse thematic areas and research that may be applicable to each specific target group.
+Frontieri will not use the data for its own research purposes, nor license the data to be used by others, without the written consent of the UNDP; 
 
-Translation of tools:  Our research team will translate the interview checklist from English to Arabic and other local languages. A back-translation from Arabic and other local languages to English will also be conducted to ensure the meaning similarity between the original and back-translated English versions. Any discrepancies identified in the back translation will be corrected to maintain data quality.
+No data or other information from this survey will be released to third parties without the written approval of the UNDP; 
 
-Pre-Testing of Tools: Prior to the deployment of field staff, the Frontieri team will carry out a pre-test of the tools. A pilot test will be conducted based on a "mini-plan" that will be prepared and submitted to the Food and Agriculture Organization (FAO) for review and approval. The plan will outline the type and quantity of tools to be completed, the stakeholders involved, the timing and the person responsible for conducting the pilot test. The feedback obtained from the pre-test will be utilized to modify and revise the tools as deemed necessary.
+Frontieri will comply with local laws on privacy protection for all data being collected during the survey.
 
 
 
-Selection and Training of Field Staff
+OUR PROJECT IMPLEMENTATION STRATEGIES 
 
-Recruitment of Field Staff: Frontieri will ensure the recruitment, training, and deployment of an appropriate number of field staff to successfully complete the fieldwork within the agreed-upon timeframe. The selection process for field staff will consider their proficiency in both Arabic and other local languages and English languages, experience in conducting qualitative data collection methods such as Key Informant Interviews (KIIs) and Focus Group Discussions (FGDs), ability to comprehend the objectives, thematic areas, and research questions, previous experience in utilizing tablet-computer based electronic data collection, interest and motivation to actively participate in the demanding field work, commitment to work on a full-time basis throughout the entire fieldwork period, and familiarity with the study areas, among other factors.
+Reporting Mechanism
 
-Training of Field Staff: To ensure clarity and understanding among field staff, a comprehensive training manual will be prepared using clear and concise language. This manual will serve as a reference during both training sessions and fieldwork. As part of our data quality assurance mechanism, the field staff training will have a strong focus on enhancing data quality in terms of accuracy, completeness, consistency, and validity. The training sessions will cover various aspects, including data collection instruments, the use of tablet-based computer-assisted personal interviewing (CAPI) techniques, and conducting mock interviews. Mock interviews serve as a practical training method that allows data collectors to improve their interviewing skills and build confidence in their abilities. These mock interviews closely simulate real-life interviews, giving data collectors the opportunity to practice with their peers. The sessions will be recorded for review and feedback purposes as part of the training process.
+For daily and weekly progress updates and reporting, the Frontieri team will use a dashboard in an Excel spreadsheet. A project coordinator will be assigned as a focal point to manage overall communication with the client. The central data manager, GIS trainers, and assistant trainers will be part of this reporting mechanism for successful implementation of the assignment. Accordingly, GIS trainers will report directly to the project manager, and the project manager will develop the daily report and submit it to the project coordinator. Finally, the project coordinator will update the progress directly to the UNDP focal person. The report mainly focuses on the training provision status, the data collection status, and the final unified database report. Finally, Frontieri will provide a compiled and comprehensive report for these three major milestones to the UNDP focal person.
 
+Ethics 
 
+Keeping the standard and scientific research ethics, confidentiality, privacy protocols and meeting compliances of the UN core values are at the very heart of the Frontieri undertakings. Professional ethics during training provision, quality data collection, database development and dependable report is guaranteed by the consulting the firm. Frontieri will be obliged to meet compliances of the UN core values including:
 
-Piloting and Debriefing
+Demonstration of integrity by modeling the UN’s values and ethical standards;
 
-As part of the training process, a piloting exercise will be conducted to evaluate the performance of supervisors and qualitative interviewers. This exercise aims to test the guiding checklist, allocate sufficient time, and observe how data collectors administer data collection checklists and audio recording devices. This exercise is essential for improving data quality, encompassing accuracy, completeness, consistency, and validity. During the pilot testing phase, each data collector will conduct a minimum of two full interviews, and supervisors will carefully review the collected data. Once the supervisors have reviewed the recorded data, it will be sent to the research team, either in its recorded or transcribed form. After completing the pilot survey, a debriefing session will be conducted to gather relevant information and feedback from the piloting exercises. This feedback will be used to make any necessary amendments to the interview guides. Additionally, the project coordinator and the research team from the client side will provide information and briefings to the field staff regarding any issues identified in the data quality. This collaborative approach ensures that all stakeholders are informed and involved in maintaining high-quality data collection standards.
+Promoting the vision, mission, and strategic goals of UNDP;
 
-Fieldwork Data Collection Phase
+Displaying cultural, gender, religion, race, nationality and age sensitivity and adaptability
 
+Treating all people fairly without favoritism;
 
+Fulfilling all obligations to gender sensitivity and zero tolerance for sexual harassment.
 
-The collection of data will be carried out with the assistance of CAPI, specifically through the use of tablets for field data collection. The process of collecting field data will be based on a fieldwork plan, which involves scheduling and moving around in the field to obtain the desired data. The fieldwork plan is a crucial element that determines the quality of the data being collected. Therefore, it is of utmost importance to pay careful attention to the quality of implementation of the field data collection process and monitor it in real time to address any problems that may arise during the process. Each step in the fieldwork process, such as making sample lists, enrolling organizations, sending out data collecting teams, carrying out daily supervision in the field, and adapting the tools, should be planned and reviewed carefully for quality. A detailed field data collection plan will be shared with the FAO before the onset of the data collection. Frontieri will apply the following approaches and procedures to ensure the effective implementation of the fieldwork and the collection of high-quality data:
+Risk Assessment and Anticipated Contingency Plans and Mitigation Strategies 
 
-Each field team will be equipped with a standardized fieldwork implementation plan and a task calendar that clearly outlines the logistical details of the fieldwork. This plan will explicitly state the required number of data collectors necessary to effectively carry out the designated portion of data collection activities within a specified study area.
+Identifying potential risks that may have direct and indirect risks on the successful completion of this data collection process and training is essential as it would help us to design an appropriate solution to mitigate and avoid the risks and their effects on our data quality. Thus, we have identified expected (potential) risks and attempted to describe their probability, impact, and effect on the assignment, and suggested possible mitigation actions as presented in Table 2 below.
 
-Each field team will be assigned a supervisor who will be responsible for overseeing and coordinating the activities of the interviewers. Additionally, the supervisor will provide on-site training and support to the team. The optimal ratio between supervisors and interviewers will be assigned depending on the specific characteristics and requirements of the study.
 
-At the commencement of the workday, the supervisors shall provide the interviewers with a detailed outline of their daily tasks. At the conclusion of the day, the interviewers shall report to their supervisors regarding the interviews conducted and the outcomes thereof. The supervisors shall scrutinize the completed interviews to ensure that the interviewers have accurately selected the respondents and that the data collection tools have been completed comprehensively and precisely.
 
-A daily logbook shall be maintained to oversee the advancement of the field data collection procedure, encompassing the documentation of various facets such as:
+Table 2 Potential risks, their probability of occurrence and mitigation strategies
 
-The number of respondents approached, interviews completed and incomplete interviews
-
-The response, refusal and non-contact rates
-
-The number of back-checks and their outcomes 
-
-
-
-
-
-
-
-III: Post-fieldwork Activities
-
-De-briefing sessions: It is expected that all supervisors, and if feasible, all interviewers and data management staff, will partake in de-briefing sessions with the core research team. The purpose of these sessions is to discuss any issues or difficulties encountered during the field data collection process, as well as the strategies employed to address them. Additionally, these sessions serve as a platform for the exchange of ideas and information regarding the fieldwork experience, which can be utilized as valuable input when preparing the final reports. It is imperative that these de-briefing sessions take place immediately after the completion of the fieldwork, to ensure that the field staff do not forget the crucial details of their experiences.
-
-
-
-Preparation of the final dataset and documentation: A data analyst is likely to have numerous inquiries regarding the data. To prevent an overwhelming influx of clarification requests that could consume a significant portion of staff resources, metadata will be generated. This metadata will elucidate the data collection process and the organization and formatting of the data files. It will encompass descriptions of any codes that are absent from the checklists/questionnaires, along with explanations for any instances where the data collection deviated from the initial plans.
-
-
-
-Data Analysis and Report Writing: The collection of qualitative data will involve the use of digital audio recorders, which will be transcribed and translated from the local languages in which the interviews were conducted into English by professional transcribers. To analyze the qualitative data, we will utilize the qualitative data analysis software, ATLAS.ti. Given the significance of the qualitative data in addressing the primary objectives of the study, Frontieri will employ a systematic approach to qualitative data analysis, focusing on thematic areas and key research questions.
-
-
-
-C.3.3. Research Ethics, Confidentiality, and Privacy
-
-Adhering to the established norms of standard and scientific research ethics, as well as maintaining strict confidentiality and privacy protocols, lies at the core of Frontieri's endeavors. A concise overview of these matters encompasses the following:
-
-Informed Consent: The informed consent of a research participant is of utmost importance in the collection of data. Consequently, Frontieri will develop a consent form, both in written and verbal format, that is easily comprehensible to the participants of the study. The form will provide a clear explanation of the study's objectives, the specific information to be gathered, the purpose of this information, how it will be utilized, and with whom it may be shared. As a result, research participants will be sufficiently informed to make a well-informed decision regarding their participation in the study. They will be made aware that they possess the complete right to either decline or participate in the study. We will ensure that the informed consent is translated into languages that the participants understand, and interviewers and facilitators will read it aloud to the respondents prior to the commencement of the interview. The interview process will only commence once the respondents express their interest in participating in the research.
-
-Data Confidentiality: It is the right of respondents to request that their personal information not be disclosed when the results of a study are published or when datasets from a research project are shared with other investigators. Protecting the privacy of research subjects is a responsibility that falls on all those involved in the research. In this regard, we will ensure that the data and personal identities of individual participants remain confidential. The field supervisors and survey manager will also provide careful supervision of data collectors to ensure that they adhere to best practices in protecting the confidentiality of all participant data.
-
-Data Privacy/Protection Protocol: The data privacy protocol aims to prevent unauthorized individuals from gaining access to field data. Data privacy will be regulated through the implementation of general data protection measures, paper file security protocols, and electronic data security regulations.
-
-In general, Frontieri shall strictly comply with all standards and requirements set forth by the Food and Agriculture Organization (FAO) pertaining to research ethics, data protection, and intellectual property.
-
-C.3.4.1. IRB Approval
-
-The Frontieri team recognizes and acknowledges the significance of obtaining ethical approval before conducting any research involving human participants. We fully understand that for this particular assignment, it is crucial to seek IRB approval to ensure strict compliance with ethical principles, regulations, legal requirements, relevant guidelines, and local laws. To facilitate this process, the Frontieri team will actively and diligently pursue obtaining approval from the relevant institutions through our office in Juba. We will work closely with the research team from the Food and Agricultural Organization to assess the need for and acquire any necessary ethics approval required for the survey.
-
-
-
-Considering the project's tight timeline, we are aware that obtaining ethical approval may present challenges due to the typically lengthier IRB review process. However, we will explore the possibility of an expedited review, which may expedite the processing and approval of the ethical requirements. Our commitment is to carry out the research with the utmost consideration for ethical standards and participant welfare, and we will make every effort to obtain the necessary ethical approval in a timely manner.
-
-C.3.4. Team Structure and Reporting Mechanisms
-
-To provide regular progress updates and reporting for the project, the team will use a dashboard or an Excel spreadsheet. The Frontieri team will be responsible for implementing the daily reporting system. The Project Coordinator will serve as the main point of contact for communication with the client. To ensure the successful implementation of the project, Supervisors and Enumerators will be involved in the reporting mechanism. Field supervisors will report directly to the Project Manager, who will then develop the daily report and submit it to the Project Coordinator. Finally, the Project Coordinator will update the Food and Agricultural Organization research team on the progress. 
-
-
-
-C.3.5. Potential Risks and Mitigation Strategies
-
-It is crucial to identify potential risks that could directly or indirectly impact the successful completion of the assignment. By doing so, we can develop appropriate measures to mitigate these risks. We have conducted an analysis and outlined the main potential risks, along with recommended mitigation actions, in Table 5 below. For each risk, the Frontieri team has assessed the probability, impact, and effect it may have on the survey assignment. The identified risks primarily revolve around assumptions and challenges associated with the project scope, deliverables, timescale, and resources. Please refer to Table 5 for a comprehensive overview of the identified risks and corresponding mitigation measures.
-
-
-
-Table 6: Potential risks and mitigation strategies
-
-
-
-Potential Risks/Assumptions
+Potential risks assumed
 
 Probability
 
 Impact
 
-Effect on project
+Effect on the assignment
 
 Mitigation actions
 
-Risk from lack of adequate understanding of the data collection tools by enumerators 
+Conflict/security risks in some of the study areas
 
-Low 
 
-High
-
-Poor quality data 
-
-Based on the final size of the instruments and in consultation with the client or research team, we will allocate enough training days (including the pilot). We will make use of our ample experience in providing training for such kind of large-scale surveys.
-
-The risk of dropout of field workers after the launch of the fieldwork  
-
-Low 
 
 High
 
-Unable to complete the project on time 
 
-Adequate reserve field staff will be trained which will enable us for immediate replacement. 
-
-Risk from poor communication with the research team and other stakeholders
-
-Low
 
 High 
 
-Lack of information and confidence that will affect project timeline and quality. 
 
-We will follow the project management system to check project deliverables and ensure each stage is signed off by the client/research team 
 
-Standard reporting mechanisms that ensure review of survey progress 
+Challenge on data collection process
 
-Regular internal team meetings
+Frontieri will plan to use field expert’s knowledge to fill missing gaps. If this is not possible it will consult the client for possible solutions.
 
-Clear meeting minutes to be circulated and reviewed.
+Loss of power or internet connection at the field level
 
-We have a system to gauge client satisfaction on each milestone (via online feedback collection) 
 
-Change in the scope of the survey and timeline 
-
-Low 
-
-High
-
-Time-quality-cost
-
-Discuss the impact of change on schedules or design, and agree if a change to specification will proceed. Implement the change, when agreed.
-
-Unethical field conduct on the part of the field worker
-
-Low 
-
-High 
-
-Hurt the reputation of the project/legitimacy and reliability of the data collected 
-
-Put in place close field supervision.  
-
-Field supervision check
-
-Office-level callback to sample households 
-
-Run consistency check
-
-Check GPS coordinates 
-
-Loss of power or internet connection on the field level
-
-High
-
-High
-
-Project timeline and quality 
-
-Provide a power bank to the field staff to recharge equipment at the field level.  
-
-Use a 4G connection 
-
-Households refuse to participate in the survey 
-
-Low
-
-High 
-
-Increase non-response rate 
-
-Field staff will describe the objective of the survey thoroughly.
-
-We will also consider replacements for attrition HHs. 
-
-The current security problems in some of the study area
 
 Medium
 
+
+
+Low
+
+Project timeline and quality, delay during syncing data
+
+Provision of power bank to the field staff to recharge equipment at the field level.
+
+The client may transport field staffs to nearby network location to sync data
+
+Dense forest canopy location may have little GPS signal
+
+
+
+low
+
+
+
+high
+
+
+
+Few spatial data collected
+
+
+
+Use offline GeoTiff high resolution Aibus images to support data collection 
+
+ 
+
+
+
+Unstable COVID 19 situations
+
+
+
+
+
 High
 
-The security situation (active and passive) in different areas of the country
 
-Ensuring the safety and well-being of our field staff is our priority. 
 
-Conduct a security assessment
 
-Have a contingency plan such as using replacement sample areas in consultation with the client. 
 
+Low
 
 
-C.3.6. Our Research approach to conflict-affected areas
 
-This section presents our understanding of and preparedness for the potential security and safety threats in performing under the contract. Frontieri understands that it will be solely responsible for developing, implementing, and maintaining all necessary safety and security risk management measures to meet the duty of care obligations to its personnel, including any third parties to engage in the delivery of the service. 
+Time-quality-cost and field staff safety
 
+As much as possible, we will follow the notice from federal and regional government officials and strictly adhere to COVID-19 mitigation strategies to notify field data collectors.
 
+Client Engagement and Communication  
 
-The purpose of security assessment and contingency planning is, essentially, to be better able to mitigate any disruption of the implementation of the assignment. It takes into account all possible challenges that might be encountered throughout the survey implementation, along with proposed methods of risk mitigation. Security threats can affect travel plans to study sites, thereby hindering the smooth operation of the data collection process. Hence, before commencing fieldwork, the Frontieri team will map out and identify unsafe and insecure areas in the respective data collection sites. Objective criteria for classifying levels of insecurity will be developed and this will provide options to guide implementation in light of the fluid security context. 
+Frontieri Consult will actively engage the client team and other relevant stakeholders through the process of training material development, pre-testing of database, training, pilot testing, field data collection and database management as clearly indicated in the ToR. Frontieri’s project coordinator will update the research team/client about the progress of the work once a week.
 
+Property rights: Frontieri respects the intellectual property right and understands that RIP (UNDP) shall, solely and exclusively, own all rights in and to any work created in connection with this agreement, including all information, data, documents, copyrights, or other proprietary rights in and to the work.
 
+Delays: Due to unforeseen problems that may be encountered in the course of the assignment, some aspects of the project could be delayed beyond the timeline specified. In this regard, Frontieri will:
 
-We will have a daily security update and the field team will also have a weekly meeting mainly with the field supervisors. This helps to track the security alert status in survey areas and awareness of accompanying procedures for each level. In addition, field staff are required to report any unfolding security problem that they may come across to a respective field supervisor. Table 6 summarizes the potential risks and mitigation strategies.
+notify the client about the delay in writing with a plausible reason for the same at least 10 days ahead of the timeline due date; and 
 
+present ‘just-cause’ for the delay external to the performance of the study team.
 
+Frontieri will work closely with FSTU, the national/regional RIP project coordinators, the national and regional RIP GIS Officers/experts to produce the operational manual and guidelines, to conduct the training and ensure the data is properly collected and processed.
 
+Frontieri will avail itself whenever UNDP/Ethiopian Forest Development (EFD) and partners require meetings or clarification questions. UNDP shall notify Frontieri through email and telephone whenever such meetings are required.
 
+Detailed and comprehensive site information will be provided by the EFD and this should be in place and communicated to Frontieri prior to commencing its consultancy services.
 
+EFD and UNDP ensure that Frontieri will have access to the working sites and provide supports as relevant.
 
+Both EFD and UNDP shall approve all deliverables.
 
-Table 7: Risk Analysis Matrix
+Deliverables and Workplan 
 
-Risk to the safety and security of staff
+Deliverables 
 
-The team leader and field operation manager will define and lead all security risk mitigation measures. 
+As part of the assignment, the Frontieri team will deliver the following. 
 
-They are responsible for preparing contingency plans that include incidence response and evacuation planning. 
+Inception Report including database design and training and operation manual,
 
-They are also responsible for ensuring that all teams are up to date with current country dynamics and that the security plans reflect the possible changing environment of the locations. 
+Training report, functioning geodatabase, operational manual and guideline,
 
-Risk to the safety and security of data collection teams when travelling to high-risk locations
+Draft report and raw data that includes all spatial and non-spatial data,
 
-Frontieri team and its local partner will utilize staff/enumerators native to the local areas as much as possible throughout the data collection period. Enumerators shall be recruited locally in the field locations for contextual fit purposes. We will follow a local partnership and engagement approach.
+Final report and final functional geodatabase that include all shapefiles and final operational manual and guideline.
 
-When utilizing staff in high-risk locations, staff will be subject to security protocols detailing accommodation and movement restrictions.
+Workplan
 
-Risk to data collection teams in being away from secure locations
+For accomplishing all the activities of the REDD+ investment program assignment, 60 days were allocated. A brief summary of work plan is presented in following table (Table 3.2).
 
-Before fieldwork, all locations will undergo security vetting to ensure accessibility and assess risk to field staff.
 
-When a site is deemed inaccessible due to the prevailing security environment, Frontieri will notify the FAO, so that alternative arrangements can be made.
 
-While on location, field staff are required to check in daily with their direct line field supervisor/manager regarding any local threats or concerns. In instances where a threat has been identified, the security manager will be notified to assess the situation, and the risk, and propose proportional mitigation strategies.
+Major Activities
 
-Risk in remote and fragile areas, potentially leading to loss of data
+Individual/team responsibility
 
-Remotely working team members will different mechanisms (audio, paper, etc.) to record data. As such, the risk of data loss will remain minimal throughout project implementation.
+Due date
 
+start date
 
+end date
 
-Risk to filed staff – involvement in local conflict
+Phase I: Inception Phase
 
-All field staff are to remain impartial in all conflict between clan groups and to avoid giving the impression of favoritism towards one clan over another. 
 
-Field staff will be given training about the benefits of neutrality including how to address sensitive topics. The neutrality approach will be strictly followed in undertaking the assignment.
 
-Risk to data collection
 
-Our security providers will alert our in-field staff of potential security threats and therefore our staff will not travel to designated areas without receiving the relevant security clearance or in-field support.
 
-Crime Threats Such as Armed Robbery
 
-We will set up a dedicated team that will closely monitor crime hotspot areas in all study regions and continually update the field team as to how to avoid these areas as much as possible.
 
-Armed Conflict 
+1.1 Introductory kick-off meeting
 
-A continual security assessment will be put in place and the project team will remain vigilant regarding the fluid security situation. A security update will be shared with the field team via text message regularly.
+UNDP team and  Frontieri
 
+ 
 
+ 
 
-FORM TECH d: Work Plan and Deliverables
+1.2 Submission of draft Inception Report (with Methods and GIS Database Design) and draft Training and Operational Manual)
 
-D.1. Work Plan
+Frontieri
 
-The work plan has been formulated with careful consideration of the tasks and timeframe outlined in the Terms of Reference (TOR). Consequently, the study on Institutional Capacity and Systems Needs Assessment for the State Ministry of Cooperatives and Rural Development will be conducted over a period of 32 working days. The tasks required to accomplish the overarching objective of the study are outlined below, divided into two distinct phases.
+05 Jan. 24
 
-Phase 1: Groundwork and planning (3 days)
+05 Jan. 24
 
-Activity 1.1: Conducting an inception workshop and signing agreement: Frontieri team will conduct an inception workshop that will bring together all the stakeholders involved in the study. The purpose of the workshop is to seek input from stakeholders and gatekeepers to achieve consensus. Once all stakeholders have agreed on the proposed project, an agreement will be signed with FAO. 
+1.3. Presentation and discussion on draft inception report, database design and training and operation manual 
 
+Frontieri
 
+08 Jan. 24
 
-Activity 1.2: Desk review: the Frontieri team will review the programme-related reports of the State Ministry of Cooperatives and Rural Development, other government and non-governmental organizations in South Sudan, relevant research, and related documents. The team will analyze those reports to gain insights into the current state of affairs, identify gaps and understand the context better. The team will use the findings of the desk review to provide recommendations and insights for the assignment. 
+08 Jan. 24
 
-Activity 1.3: Developing data collection checklist/interview guide:  the Frontieri team will develop contextualized interview guides that are aligned with the objectives of the initiative.
+1.4. Feedback and comments on the draft inception report, database design and training and operation manual 
 
-Activity 1.4: Determining sample size and study area: Frontieri with the consultation of FAO will determine the sample frame, sample size and locations of the interviews. 
+Client team 
 
-Phase 2: Data collection, analysis and write-up (29 days) 
+09 Jan. 24
 
-Activity 2.1: Data collection: The Frontieri team is scheduled to carry out Key Informant Interviews (KII) and Focus Group Discussions (FGD) in Juba, South Sudan. The KII will be conducted with the staff of SMCRD and other personnel from the national ministry offices who are working in collaboration with SMCRD. 
+10 Jan. 24
 
-Activity 2.2: Transcribing and analyzing the data: the Frontieri team will ensure the accuracy, consistency, and reliability of qualitative data. It involves identifying and rectifying any errors, inconsistencies, or discrepancies in the data to enhance its quality and usefulness for analysis.
+1.5 Revision of inception report, database design and training and operation manual 
 
-Activity 2.3: Submitting and presentation of the first draft report: Frontieri team will provide a draft report on the findings and recommendations and present the result for FAO. 
+Frontieri
 
-Activity 2.4: Conducting validation workshop: Frontieri team will prepare a workshop to review draft findings.
+11 Jan. 24
 
-Activity 2.5: Submitting final report: Frontieri team will submit consolidate a comprehensive capacity needs and systems assessment report and the capacity development plan, after incorporating comments from the validation workshop.
+12 Jan. 24
 
-.
+1.6. Submission of revised inception report, database design and training and operation manual 
 
+Frontieri
 
+12 Jan. 24
 
+12 Jan. 24
 
+1.7 Approval of revised inception report, database design and training and operation manual 
 
-Table 8: Key activities and timeline
+Client team
 
-S.No.
+13 Jan. 24
 
-Activities
+14 Jan. 24
 
-Timeline
+Phase II: Training Phase
 
-Week 1
 
-Week 2
 
-Week 3
 
-Week 4
 
-Wee 5
 
-Week 6
 
-Week 7
+2.1 Arrangement of training venue, computers and Tablet/GPS
 
-1
+Frontieri
 
-2
+14 Jan. 24
 
-3
+15 Jan. 24
 
-4
+2.2 Training at Awassa, Adama, Bahir Dar and Jimma
 
-5
+Frontieri
 
-1
+16 Jan. 24
 
-2
+26 Jan. 24
 
-3
+2.3 Pilot testing at nearby training location and debriefing
 
-4
+Frontieri
 
-5
+27 Jan 24
 
-1
+27 Jan 24
 
-2
+2.4 Debriefing
 
-3
+Frontieri
 
-4
+28 Jan. 24
 
-5
+28 Jan. 24
 
-1
+2.5 Preparation of training report, geodatabase and operational manual and guideline
 
-2
+Frontieri
 
-3
+29 Jan. 24
 
-4
+31 Jan. 24
 
-5
+2.6 Submission of training report, functioning geodatabase, operational manual and guideline
 
-1
+Frontieri
 
-2
+31 Jan. 24
 
-3
+31 Jan. 24
 
-4
+Phase III: Field data collection and supervision
 
-5
 
-1
 
-2
 
-3
 
-4
 
-5
 
-1
+3.1 Deployment of project staffs for data collection
 
-2
+Frontieri
 
-1
+29 Jan. 24
 
-Groundwork and planning
+30 Jan. 24
 
+3.2 Field data collection
 
+Frontieri
 
+31 Jan. 24
 
+15 Feb. 24
 
+3.3 Supervision and monitoring of data quality
 
+Frontieri
 
+31 Jan. 24
 
+15 Feb. 24
 
+3.4 Data auditing and cleaning of spatial and non-spatial data
 
+Frontieri
 
+16 Feb. 24
 
+21 Feb. 24
 
+3.4 Preparation of draft report
 
+Frontieri
 
+16 Feb. 24
 
+22 Feb. 24
 
+Phase IV: Geodatabase and Report Writing Phase
 
 
 
@@ -1261,33 +1056,61 @@ Groundwork and planning
 
 
 
+4.1 Data auditing and cleaning of spatial and non-spatial data
 
+Frontieri
 
+16 Feb. 24
 
+21 Feb. 24
 
+4.1. Conducting primary data analysis and preparing draft report 
 
+Frontieri
 
+16 Feb. 24
 
+21 Feb. 24
 
+4.3 Submission of the draft report and collected spatial and non-spatial data
 
+Frontieri
 
+21 Feb. 24
 
+21 Feb. 24
 
+4.4 Receiving feedback and comments on the draft report
 
+Client team 
 
+22 Feb. 24
 
+23 Feb. 24
 
+4.5 Revision of the draft report based on feedback and comments from the Client team 
 
+Frontieri team
 
+23 Feb. 24
 
+26 Feb. 24
 
+4.6 Compiling Geodatabase at national and woreda levels
 
+Frontieri team
 
+22 Feb. 24
 
+26 Feb. 24
 
+4.7 Submission of final report and final functional geodatabase that include all shapefiles and final operational manual and guideline
 
+Frontieri
 
+28 Feb. 24
 
+28 Feb. 24
 
 
 
@@ -1297,22 +1120,31 @@ Groundwork and planning
 
 
 
+REFERENCES
 
+1. Abbadi Girmay Reda. 2022. Landscape Restoration in Tigrai: Challenges and experiences. Dryland restoration and dry forest management in Ethiopia (Eds. Mitiku Haile, J. Livingstone, Amsale Shibeshi, and Pasiecznik N), 160 pages, 2021. ISBN: 978-90-5113- 152-9, PENHA, Addis Ababa, Ethiopia, and Tropenbos International, The Netherlands.
 
+2. Abbadi, Girmay Reda. 2016. Evidences of Spatiotemporal Climate Change and its Mitigation in Ethiopia. Hydrol Current Res 7: 220. doi:10.4172/2157-7587.1000220. 
 
+3. Abbadi G R. Framework for Carbon Sequestration and Accounting of SLM Practices for Climate Change Mitigation in Ethiopia. Int J Environ Sci Nat Res. 2017; 4(2): 555631. DOI: 10.19080/IJESNR.2017.04.555631 4. FDRE. 2012. National strategy and action plan for the implementation of the great green wall initiative in Ethiopia. 
 
+5. FDRE, MEFCC, 2016. National REDD+ Strategy (2016 - 2030).
 
-1.1
+6. Gebremedhin Gebremeskel, T.G. Gebremicael, Abbadi Girmay. 2017. Economic and environmental rehabilitation through soil and water conservation, the case of Tigray in northern Ethiopia. Journal of Arid Environments (2018), Volume 151, Pages 113-124, https://doi.org/10.1016/j.jaridenv.2017.12.002, Elsevier Publishers. 
 
-Conducting an inception workshop and signing an agreement
+7. https://www.worldfuturecouncil.org/p/2017-desertification/ 
 
+8. NMSA. 2008. Climate change adaptation taskforce and plans. 
 
+9. Girma, A., de Bie, C.A.J.M., Skidmore, A.K., Venus, V., & Bongers, F. (2015). Hypertemporal SPOT-NDVI dataset parameterization captures species distributions. International Journal of Geographical Information Science, 30, 89-107, 10.1080/13658816.2015.1082565 
 
+10. Girma, A., Skidmore, A.K., de Bie, C.A.J.M., Bongers, F., & Schlerf, M. (2013). Photosynthetic bark: Use of chlorophyll absorption continuum index to estimate Boswellia papyrifera bark chlorophyll content. International Journal of Applied Earth Observation and Geoinformation, 23, 71-80, 10.1016/j.jag.2012.10.013.
 
 
 
 
 
+TEAM STRUCTURE 
 
 
 
@@ -1324,15 +1156,21 @@ Conducting an inception workshop and signing an agreement
 
 
 
+Client’s Counterpart team
 
 
 
 
 
+ Lead trainers: 
 
+Abebe Ejigu 
 
+Afework Mekeberiaw
 
+Berihu Alemayehu
 
+Elias Cherenet
 
 
 
@@ -1340,8 +1178,11 @@ Conducting an inception workshop and signing an agreement
 
 
 
+Project Management Unit
 
+Team Leader
 
+Mekbeb Eshetu (PhD.)
 
 
 
@@ -1359,736 +1200,9 @@ Conducting an inception workshop and signing an agreement
 
 
 
+Assisstant trainers:
 
-
-
-
-
-
-
-
-
-
-
-1.2
-
-Desk review
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1.3
-
-Developing interview checklists 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1.4
-
-Amending the sample size in consultation with the client
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2
-
-Data collection, analysis and write-up
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2.1
-
-Data collection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2.2
-
-Transcribing and analyzing the data
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2.3
-
-Submitting and presentation of the first draft report
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2.4
-
-Conducting validation workshop
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2.5
-
-Submitting final report  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-D.2. Key Deliverables
-
-As stated in the Terms of Reference (TOR), the report of the assignment will be submitted to the Food and Agriculture Organization (FAO). Any recommendations resulting from the study on Institutional Capacity and Systems Needs Assessment will be directed to FAO through a management response. In accordance with this, the essential outcomes of the assignment are outlined in the subsequent table:
-
-
-
-Table 9: Activity and deliverables
-
-No.
-
-Activity
-
-Deliverables
-
-1.
-
-Signing agreement
-
-Frontieri will sign an agreement on the terms, conditions, and obligations of the assignment with FAO. Followingly, the legally binding document agreed upon by Frontieri consult firm and FAO will be submitted to FAO. 
-
-2. 
-
-Desk review
-
-Frontieri will analyze relevant government and non-governmental organizations' annual reports, relevant existing literature and relevant research as of the objectives of the assignment. Finally, the document that summarizes the findings of the desk review will be produced. It includes an introduction, methodology, findings, conclusion and recommendations. 
-
-3. 
-
-Inception workshop 
-
-An inception workshop report with a detailed finalized sampling and methodology, data collection tools, and a time plan.  
-
-4. 
-
-Interview guide
-
-Frontieri will develop an interview guide that is aligned with the objectives of the assignment. It includes a list of topics, high-level questions and strategies for approaching and collecting data from participants or discussants. The interview guide will be contextualized to the nature of respondents, types of organizations, etc. 
-
-Translated version of the interview guide from English into Arabic and back-translations into English.
-
-A checklist of hardware availability filled out and signed by the field coordinator of the research team. This includes a sufficient number of tablets (one per enumerator and supervisor), power bank (per survey team), 3G internet connection devices (per survey team) and extra paper questionnaires 
-
-5.
-
-Recruitment and formation of fieldwork teams 
-
-The summary of educational, language skill, and work experience backgrounds of all enumerators
-
-The CVs of field supervisors, and data collectors. 
-
-Training manuals with research and ethical protocol and key concepts covered by the interview guide. 
-
-6.
-
-Undertaking KII and FGD
-
-Protocols and guidelines including a protocol to minimize attrition (5% or less).
-
-Approval letters from the appropriate government office before the launching of the survey
-
-Interim report: It will include a summary and a brief description of the progress of the fieldwork (KII, FGD, Household interviews and site observation) implementation. 
-
-7.
-
-Data management
-
-A comprehensive codebook encompassing all inquiries and corresponding response alternatives shall be formulated. Subsequently, the data shall be encoded in accordance with the established codebook.
-
-8
-
-Validation workshop
-
-A validation workshop report:  The draft study findings and recommendations will be shared with relevant stakeholders to assess and confirm the quality, accuracy and reliability of the study. It is an opportunity to collect feedback from relevant experts and stakeholders. Accordingly, the document which includes an introduction, background, methodology, results, conclusion, and recommendations will be submitted to FAO. 
-
-9.
-
-A draft capacity needs and systems assessment report
-
-Draft report: We will submit a draft report on the findings with recommendations formally which includes an executive summary, an introduction, methodology, findings, conclusions, recommendations, references, and appendices.
-
-10. 
-
-Final capacity needs and systems assessment report
-
-
-
-Final report:  We will submit a well-structured, well-written and easy-to-understand report to FAO. It includes an executive summary, an introduction, methodology, findings, conclusions, recommendations, references, and appendices. 
-
-11.
-
-A draft capacity development plan
-
-A preliminary plan for enhancing capacity, structured in accordance with the three dimensions of identified deficiencies (namely, individual, organizational, and systemic), shall be presented to the Food and Agriculture Organization (FAO).
-
-12.
-
-Final comprehensive capacity development plan
-
-A conclusive and all-encompassing capacity development plan, structured in accordance with the three dimensions (individual, organization, and system) of identified deficiencies, will be presented to the Food and Agriculture Organization (FAO). Feedback on the preliminary plan will also be included.
-
-
-
-
-
-
+4 GIS experts and 4 computer lab assistants 
 
 
 

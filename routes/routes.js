@@ -8,6 +8,10 @@ const rfpController = require('../controllers/rfpController');
 const tpController = require('../controllers/tpController');
 const { verifyToken } = require('../middlewares/verifyToken');
 const projectController = require('../controllers/projectController');
+const irController = require('../controllers/irController');
+const frController = require('../controllers/frController');
+
+
 const cvProjectController = require('../controllers/cvProjectController');
 
 const router = express.Router();
@@ -81,7 +85,19 @@ router.put('/projects/:id', projectController.update);
 router.delete('/projects/:id', projectController.delete);
 
 
+router.get('/irs', irController.getAll);
+router.post('/irs', irController.createIR);
 
+router.get('/irs/:id', irController.getOne);
+router.put('/irs/:id', irController.updateIR);
+router.delete('/irs/:id', irController.delete);
+
+router.get('/irs', frController.getAll);
+router.post('/irs', frController.createFR);
+
+router.get('/irs/:id', frController.getOne);
+router.put('/irs/:id', frController.updateFR);
+router.delete('/irs/:id', frController.delete);
 
 
 router.post('/signup', userController.signup);
