@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 const RFP = require('./RFP'); // Import the RFP model
 
-const FR = sequelize.define('IR', {
+const IR = sequelize.define('IR', {
   title: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -10,7 +10,11 @@ const FR = sequelize.define('IR', {
 
   rfpId: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
+  },
+  rfpNo: {
+    type: DataTypes.STRING,
+    allowNull: true,
   },
   file: {
     type: DataTypes.TEXT,
@@ -29,4 +33,4 @@ const FR = sequelize.define('IR', {
 // Define association between Tp and RFP
 // Tp.hasOne(RFP); // Tp will have one RFP
 
-module.exports = FR;
+module.exports = IR;

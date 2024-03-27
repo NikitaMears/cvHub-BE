@@ -353,20 +353,48 @@ await Promise.all(promises);
   },
 
   // Search for CVs based on criteria
+  // async search(req, res) {
+  //   const { query } = req.body;
+  //   console.log("query", query)
+  //   try {
+  //     const tps = await TP.findAll({
+  //       where: {
+  //         [Op.or]: [
+  //           { title: {[Op.iLike]: `%${query}%`   } },
+  //           { client: { [Op.iLike]: `%${query}%` } },
+  //           { objectives: { [Op.iLike]: `%${query}%` } },
+  //           { sector: { [Op.iLike]: `%${query}%` } },
+  //           { specificObjectives: { [Op.iLike]: `%${query}%` } },
+  //           { content: { [Op.iLike]: `%${query}%` } },
+  //         ],
+  //       },
+  //     });
+  //     res.json(tps);
+  //   } catch (error) {
+  //     console.log(error)
+  //     res.status(500).json({ error: 'Internal server error' });
+  //   }
+  // },
+
   async search(req, res) {
     const { query } = req.body;
     console.log("query", query)
     try {
+      const searchWords = query.trim().split(/\s+/); // Split the query into individual words
+      const searchConditions = searchWords.map(word => ({
+        [Op.or]: [
+          { title: { [Op.iLike]: `%${word}%` } },
+          { client: { [Op.iLike]: `%${word}%` } },
+          { objectives: { [Op.iLike]: `%${word}%` } },
+          { sector: { [Op.iLike]: `%${word}%` } },
+          { specificObjectives: { [Op.iLike]: `%${word}%` } },
+          { content: { [Op.iLike]: `%${word}%` } },
+        ]
+      }));
+  
       const tps = await TP.findAll({
         where: {
-          [Op.or]: [
-            { title: {[Op.iLike]: `%${query}%`   } },
-            { client: { [Op.iLike]: `%${query}%` } },
-            { objectives: { [Op.iLike]: `%${query}%` } },
-            { sector: { [Op.iLike]: `%${query}%` } },
-            { specificObjectives: { [Op.iLike]: `%${query}%` } },
-            { content: { [Op.iLike]: `%${query}%` } },
-          ],
+          [Op.and]: searchConditions, // Combine all search conditions using AND
         },
       });
       res.json(tps);
@@ -374,8 +402,8 @@ await Promise.all(promises);
       console.log(error)
       res.status(500).json({ error: 'Internal server error' });
     }
-  },
-
+  }
+,  
 
   async  createTP(req, res, filePath) {
     try {

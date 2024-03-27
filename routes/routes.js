@@ -87,17 +87,23 @@ router.delete('/projects/:id', projectController.delete);
 
 router.get('/irs', irController.getAll);
 router.post('/irs', irController.createIR);
+router.post('/irs/search', irController.search);
+
 
 router.get('/irs/:id', irController.getOne);
+router.get('/irs/rfp/:id', irController.getOneForRFP);
+
 router.put('/irs/:id', irController.updateIR);
 router.delete('/irs/:id', irController.delete);
 
-router.get('/irs', frController.getAll);
-router.post('/irs', frController.createFR);
+router.get('/frs', frController.getAll);
+router.post('/frs', frController.createFR);
 
-router.get('/irs/:id', frController.getOne);
-router.put('/irs/:id', frController.updateFR);
-router.delete('/irs/:id', frController.delete);
+router.get('/frs/:id', frController.getOne);
+router.get('/frs/rfp/:id', frController.getOneForRFP);
+
+router.put('/frs/:id', frController.updateFR);
+router.delete('/frs/:id', frController.delete);
 
 
 router.post('/signup', userController.signup);
