@@ -74,29 +74,31 @@ else{
 
 
         // Define variables to store extracted data
-        let title = '';
-        let rfpNo = '';
+        // let title = '';
+        // let rfpNo = '';
        
 
-        // Define regular expressions to match the required patterns
-        const titleRegex = /Draft\s*Inception\s*Report([\s\S]*?)(?=Legal\s*Name\s*of\s*Proposing\s*Organization\/Firm:)/is;
-        const rfpNoRegex = /RFP\s*NO\.\s*(.*)/i;
+        // // Define regular expressions to match the required patterns
+        // const titleRegex = /Draft\s*Inception\s*Report([\s\S]*?)(?=Legal\s*Name\s*of\s*Proposing\s*Organization\/Firm:)/is;
+        // const rfpNoRegex = /RFP\s*NO\.\s*(.*)/i;
       
       
-        // Extract data using regular expressions
-        const titleMatch = value.match(titleRegex);
-        const rfpNoMatch = value.match(rfpNoRegex);
+        // // Extract data using regular expressions
+        // const titleMatch = value.match(titleRegex);
+        // const rfpNoMatch = value.match(rfpNoRegex);
  
 
-        // Assign extracted values to variables if matches are found
-        if (titleMatch) {
-            title = titleMatch[1];
-        }
-        if (rfpNoMatch) {
-            rfpNo = rfpNoMatch[1];
-        }
+        // // Assign extracted values to variables if matches are found
+        // if (titleMatch) {
+        //     title = titleMatch[1];
+        // }
+        // if (rfpNoMatch) {
+        //     rfpNo = rfpNoMatch[1];
+        // }
       
-
+        const title = req.body.title;
+        const rfpNo = req.body.rfpNo;
+       
         // Log the extracted data
         // console.log('Title:', title);
         // console.log('RFP No:', rfpNo);

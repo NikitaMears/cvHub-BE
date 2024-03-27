@@ -2,10 +2,10 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 const RFP = require('./RFP'); // Import the RFP model
 
-const IR = sequelize.define('IR', {
+const FR = sequelize.define('FR', {
   title: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
 
   rfpId: {
@@ -33,4 +33,4 @@ const IR = sequelize.define('IR', {
 // Define association between Tp and RFP
 // Tp.hasOne(RFP); // Tp will have one RFP
 
-module.exports = IR;
+module.exports = FR;

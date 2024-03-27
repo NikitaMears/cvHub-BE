@@ -7,6 +7,7 @@ const fs = require('fs');
 const multer = require('multer');
 const { json } = require('sequelize');
 const RFP = require('../models/RFP');
+const { compareSync } = require('bcrypt');
 
 // Multer storage configuration
 const storage = multer.diskStorage({
@@ -60,7 +61,7 @@ const frController = {
     }
   },
   async createFR(data) {
-    // console.log("data", data);
+     console.log("data", data.filePath);
     try {
       // Extract data from the request body
       const { title, rfpNo, filePath, value } = data;
@@ -73,23 +74,40 @@ const frController = {
       } else {
         rfpId = 'N/A';
       }
-      const rfpCleaned = rfpNo.replace(/:/g, "");
-      const titleCleaned = title.replace(/\n/g, "");
+      let rfpCleaned;
+    let   titleCleaned;
+      if(title){
+         titleCleaned = title.replace(/\n/g, "");
+
+      }
+      else{
+        titleCleaned = 'N/A'
+      }
+      if(rfpNo){
+        rfpCleaned = rfpNo.replace(/:/g, "");
+
+      }
+      else{
+        rfpCleaned = 'N/A'
+      }
       const valueCleaned = value.replace(/\n/g, "");
 
 
+      const randomNumber = Math.floor(Math.random() * (10000000 - 10 + 1)) + 10;
 
 
       // Create a new FR record in the database
       const newFR = await FR.create({
+        id : randomNumber,
+
         title: titleCleaned,
         rfpId,
         rfpNo: rfpCleaned,
         content: valueCleaned,
         file: filePath
       });
-
-      console.log(newFR.id)
+// console.log(newFR);
+   //   console.log(newFR.id)
       // Send the newly created FR as a JSON response
       // res.status(201).json(newFR);
     } catch (error) {
@@ -187,7 +205,7 @@ const frController = {
 
   async updateFR(data) {
 
-
+console.log("adasdasd",data);
     const { id, title, rfpId, rfpNo, value, filePath } = data;
     console.log("rfpId", rfpId)
     let rfpKey = rfpId;
@@ -206,12 +224,11 @@ const frController = {
         return res.status(404).json({ error: "FR not found" });
       }
 
-      const rfpCleaned = rfpNo.replace(/:/g, "");
-      const titleCleaned = title.replace(/\n/g, "");
+     
       const valueCleaned = value.replace(/\n/g, "");
-      fr.title = titleCleaned;
+      fr.title = title;
       fr.rfpId = rfpKey;
-      fr.rfpNo = rfpCleaned;
+      fr.rfpNo = rfpNo;
       fr.file = filePath;
 
       fr.content = valueCleaned;
@@ -221,7 +238,7 @@ const frController = {
       // res.json(fr);
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "Internal Server Error" });
+      // res.status(500).json({ error: "Internal Server Error" });
     }
   },
 

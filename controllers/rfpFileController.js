@@ -64,7 +64,7 @@ const { createRFP } = require('./rfpController');
 async function readDoc(req, res, filePath) {
     try {
         console.log(filePath)
-        const { value } = await mammoth.extractRawText({ path: '../'.concat(filePath) });
+        const { value } = await mammoth.extractRawText({ path: filePath});
       //  console.log("val", value)
 
         const outputFilePath = '.2.txt'; // Replace 'output.txt' with the desired output file path

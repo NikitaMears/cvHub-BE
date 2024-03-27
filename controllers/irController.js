@@ -193,7 +193,7 @@ const irController = {
 
 
     const { id, title, rfpId, rfpNo, value, filePath } = data;
-    console.log("rfpId", rfpId)
+    console.log("rfpId", title)
     let rfpKey = rfpId;
     if (rfpKey == null) {
       let rfp = await RFP.findOne({ where: { rfpNo: rfpNo } });
@@ -209,9 +209,22 @@ const irController = {
       if (!ir) {
         return res.status(404).json({ error: "IR not found" });
       }
-
-      const rfpCleaned = rfpNo.replace(/:/g, "");
-      const titleCleaned = title.replace(/\n/g, "");
+      let rfpCleaned;
+      let   titleCleaned;
+        if(title){
+           titleCleaned = title.replace(/\n/g, "");
+  
+        }
+        else{
+          titleCleaned = 'N/A'
+        }
+        if(rfpNo){
+          rfpCleaned = rfpNo.replace(/:/g, "");
+  
+        }
+        else{
+          rfpCleaned = 'N/A'
+        }
       const valueCleaned = value.replace(/\n/g, "");
       ir.title = titleCleaned;
       ir.rfpId = rfpKey;

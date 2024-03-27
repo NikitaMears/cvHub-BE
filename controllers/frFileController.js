@@ -22,7 +22,7 @@ async function readDocForFR( filePath) {
        
 
         // Define regular expressions to match the required patterns
-        const titleRegex = /Draft\s*Inception\s*Report([\s\S]*?)(?=Legal\s*Name\s*of\s*Proposing\s*Organization\/Ffrm:)/is;
+        const titleRegex = /([\s\S]*?)(?=Final\s*Report)/i;
         const rfpNoRegex = /RFP\s*NO\.\s*(.*)/i;
       
       
@@ -62,6 +62,7 @@ async function readDocForFR( filePath) {
 async function updateDocForFR(req, filePath) {
     
     // await new Promise(resolve => setTimeout(resolve, 5000));
+    console.log("re", req)
     // console.log(filePath);
 const id = req.params.id;
 let rfpId;
@@ -77,27 +78,27 @@ else{
 
 
         // Define variables to store extracted data
-        let title = '';
-        let rfpNo = '';
+        const title = req.body.title;
+        const rfpNo = req.body.rfpNo;
        
 
         // Define regular expressions to match the required patterns
-        const titleRegex = /Draft\s*Inception\s*Report([\s\S]*?)(?=Legal\s*Name\s*of\s*Proposing\s*Organization\/Ffrm:)/is;
-        const rfpNoRegex = /RFP\s*NO\.\s*(.*)/i;
+        // const titleRegex = /Draft\s*Inception\s*Report([\s\S]*?)(?=Legal\s*Name\s*of\s*Proposing\s*Organization\/Ffrm:)/is;
+        // const rfpNoRegex = /RFP\s*NO\.\s*(.*)/i;
       
       
         // Extract data using regular expressions
-        const titleMatch = value.match(titleRegex);
-        const rfpNoMatch = value.match(rfpNoRegex);
+        // const titleMatch = value.match(titleRegex);
+        // const rfpNoMatch = value.match(rfpNoRegex);
  
 
-        // Assign extracted values to variables if matches are found
-        if (titleMatch) {
-            title = titleMatch[1];
-        }
-        if (rfpNoMatch) {
-            rfpNo = rfpNoMatch[1];
-        }
+        // // Assign extracted values to variables if matches are found
+        // if (titleMatch) {
+        //     title = titleMatch[1];
+        // }
+        // if (rfpNoMatch) {
+        //     rfpNo = rfpNoMatch[1];
+        // }
       
 
         // Log the extracted data
